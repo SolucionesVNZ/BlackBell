@@ -17,7 +17,7 @@
         <style>
             body {
                 font-family: 'Nunito';
-                background-image: url("img/wp2574748.jpg");
+                background-image: url("img/karatefull.jpg");
                 background-position: inherit;
                 background-repeat: no-repeat;
                 background-size: cover;
