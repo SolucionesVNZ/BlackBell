@@ -4857,7 +4857,7 @@ input[type=button].btn-block {
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-  color: rgba(0, 0, 0, 0.9);
+   color: #D51C24;
 }
 
 .navbar-light .navbar-toggler {
@@ -10841,6 +10841,10 @@ a.text-dark:focus {
     padding-bottom: 50px;
 }
 
+.l1{
+    background-image: url('../img/portada/banner/banner-l1.jpg') !important;
+}
+
 .banner-principal .form-a{
     position: relative;
     left: 56%;
@@ -10849,10 +10853,26 @@ a.text-dark:focus {
     padding: 40px;
     border: 1px solid #c3c3c3;
 }
+
+.banner-principal .form-b{
+    left: 0;
+}
+
+.banner-principal  .lform{
+    background: #f3f3f3 !important;
+}
+
+.dirigido {
+    background: #D51C24;
+}
+
 .title-form{
     color: #fff;
     text-align: center;
     font-weight: 700;
+}
+.lt1{
+    color: #000 !important;
 }
 .sub-title{
     color: #fff;
@@ -10932,12 +10952,26 @@ a.text-dark:focus {
     border-bottom: 5px solid;
     width: 130px;
 }
+.text-dirigido{
+    text-align: justify;
+    font-size: 1.8em;
+    padding: 60px 30px;
+}
+
 .text-evento {
     color: #fff;
     font-size: 1.3em;
     padding-top: 30px;
     font-family: FamilyFutura;
     letter-spacing: 1px;
+}
+
+.limg1{
+    padding-top: 0px !important;
+}
+
+.limg2{
+    padding-top: 0px !important;
 }
 .espaciado{
     padding-top: 60px;
@@ -10959,12 +10993,45 @@ a.text-dark:focus {
     font-size: 2.8em;
 }
 .banner-disciplina{
-    background-image: url('../img/portada/banner/fondo-conoce-mas-disciplinas.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+     background-image: url('../img/portada/banner/fondo-conoce-mas-disciplinas.jpg');
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+     padding-top: 50px;
+     padding-bottom: 50px;
+ }
+
+.bdisc{
+    background-image: none !important;
 }
+.bdisc2{
+    background-image: none !important;
+    background-color: #F2F2F2;
+}
+
+.packec{
+    padding: 30px;
+    font-size: 1.5em;
+}
+
+.packec2{
+    text-align: center;
+    padding: 50px;
+}
+.packec3{
+    text-align: justify;
+}
+
+.karate-img{
+    width: 100%;
+}
+
+.precios {
+    background: #F2F2F2;
+    padding: 15px 50px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
 .banner-evento{
     background-image: url('../img/portada/banner/fondo-proximo-evento.jpg');
     background-repeat: no-repeat;
@@ -10980,6 +11047,7 @@ a.text-dark:focus {
 
 @media only screen and (max-width: 1025px) {
     /* For mobile phones: */
+
     .banner-principal{
         background-image: url('../img/portada/banner/mini-formulario.jpg');
         background-repeat: no-repeat;
@@ -11005,6 +11073,36 @@ a.text-dark:focus {
     .espaciado {
         padding:40px;
     }
+
+    .container-karate{
+        width: 300px;
+        height: 80px;
+        overflow: hidden;
+        margin: 10px;
+        position: relative;
+    }
+    .container-karate > .limg1{
+        position: absolute;
+        left: -145%;
+        right: -264%;
+        top: -100%;
+        bottom: -100%;
+        margin: auto;
+        min-height: 89%;
+        min-width: 220%;
+    }
+    .container-karate > .limg2 {
+        position: absolute;
+        left: -166% !important;
+        right: -219%;
+        top: -100%;
+        bottom: -100%;
+        margin: auto;
+        min-height: 89%;
+        min-width: 167% !important;
+    }
+
+
 }
 /************************/
 

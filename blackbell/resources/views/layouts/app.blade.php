@@ -47,11 +47,36 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('home') }}">{{ __('INICIO') }} | </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home') }}">{{ __('DISCIPLINAS') }} | </a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"  id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="disciplina">
+                            {{ __('DISCIPLINAS') }}
+                        </a>
+                        <div class="dropdown-menu dropright" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item dropdown-toggle" href="#"  id="submenu" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="karate()">
+                                {{ __('Karate') }}
+                            </a>
+                            <div class="dropdown-menu submenu1" aria-labelledby="submenu">
+                                <a class="dropdown-item" href="{{ route('karatebasico') }}">{{ __('Karate Basico') }}</a>
+                                <a class="dropdown-item" href="{{ route('karateintermedio') }}">{{ __('Karate Intermedio') }}</a>
+                                <a class="dropdown-item" href="{{ route('karateavanzado') }}">{{ __('Karate Avanzado') }}</a>
+                            </div>
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item dropdown-toggle" href="#"  id="submenu2" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="muaythai()">
+                                {{ __('Muay Thai') }}
+                            </a>
+                            <div class="dropdown-menu submenu2" aria-labelledby="submenu2">
+                                <a class="dropdown-item" href="#">{{ __('Muay Thai Basico') }}</a>
+                                <a class="dropdown-item" href="#">{{ __('Muay Thai Intermedio') }}</a>
+                                <a class="dropdown-item" href="#">{{ __('Muay Thai Avanzado') }}</a>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home') }}">{{ __('CONTACTO') }} | </a>
+                        <a class="nav-link" href="{{ route('home') }}">| {{ __('CONTACTO') }} | </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('home') }}">{{ __('CAMPUS') }} </a>
@@ -90,7 +115,25 @@
             </div>
         </div>
     </nav>
-
+<script>
+    function disciplina() {
+        event.preventDefault();
+        $('div.dropdown-menu.submenu1').removeClass('show');
+        $('div.dropdown-menu.submenu2').removeClass('show');
+    }
+    function karate() {
+        event.preventDefault();
+        event.stopPropagation();
+        $('.submenu2').removeClass('show');
+        $('.submenu1').addClass('show');
+    }
+    function muaythai() {
+        event.preventDefault();
+        event.stopPropagation();
+        $('.submenu1').removeClass('show');
+        $('.submenu2').addClass('show');
+    }
+</script>
     <main class="py-4">
         @yield('content')
     </main>

@@ -17,6 +17,17 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/karatebasico', function () {
+    return view('karatebasico');
+})->name('karatebasico');
+
+Route::get('/karateintermedio', function () {
+    return view('karateintermedio');
+})->name('karateintermedio');
+
+Route::get('/karateavanzado', function () {
+    return view('karateavanzado');
+})->name('karateavanzado');
 
 Route::post('contacts', [App\Http\Controllers\FormController::class, 'guardar'])
     ->name('guardarFormulario');
