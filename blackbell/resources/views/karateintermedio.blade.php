@@ -91,6 +91,9 @@
                     <b>MENSUAL:</b><br>
                     4 clases en vivo<br>
                     Acceso al campus virtual
+                    <div style="margin-top: 20px">
+                        <button type="button" class="btn btn-dark">Añadir al carrito | <i class="fas fa-shopping-cart"></i></button>
+                    </div>
                 </div>
                 <div class="col-md-6 packec2">
                     <span class="precios">S/.149</span>
@@ -103,6 +106,9 @@
                     12 clases en vivo<br>
                     Acceso al campus virtual<br>
                     Evaluación de grado
+                    <div style="margin-top: 20px">
+                        <button type="button" class="btn btn-dark">Añadir al carrito | <i class="fas fa-shopping-cart"></i></button>
+                    </div>
                 </div>
                 <div class="col-md-6 packec2">
                     <span class="precios">S/.369</span>
@@ -115,6 +121,9 @@
                     24 clases en vivo<br>
                     Acceso al campus virtual<br>
                     Evaluación de grado
+                    <div style="margin-top: 20px">
+                        <button type="button" class="btn btn-dark">Añadir al carrito | <i class="fas fa-shopping-cart"></i></button>
+                    </div>
                 </div>
                 <div class="col-md-6 packec2">
                     <span class="precios">S/.719</span>

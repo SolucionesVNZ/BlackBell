@@ -79,30 +79,38 @@
                         <a class="nav-link" href="{{ route('home') }}">| {{ __('CONTACTO') }} | </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home') }}">{{ __('CAMPUS') }} </a>
+                        <a class="nav-link" href="{{ route('home') }}">{{ __('CAMPUS') }} |</a>
                     </li>
-                    <!-- Authentication Links -->
+
                     @guest
-                        <!--<li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>-->
-                        @endif
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"  id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <div class="dropdown-menu dropleft" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('login') }}"  id="submenu" role="button" aria-haspopup="true"
+                               aria-expanded="false">Iniciar sesión
+                            </a>
+                            @if (Route::has('register'))
+                            <a class="dropdown-item" href="{{ route('register') }}"  id="submenu" role="button" aria-haspopup="true"
+                               aria-expanded="false">Registrarse
+                            </a>
+                            @endif
+                        </div>
+                    </li>
                     @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
+                                Hola {{ Auth::user()->name }} {{ Auth::user()->lastname }}
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    {{ __('Cerrar sesión') }}
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -111,6 +119,10 @@
                             </div>
                         </li>
                     @endguest
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="">| <i class="fa fa-shopping-cart"></i> <span class="badge badge-light">0</span></a>
+                    </li>
                 </ul>
             </div>
         </div>

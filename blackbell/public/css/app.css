@@ -6282,6 +6282,8 @@ a.close.disabled {
   align-items: flex-start;
   justify-content: space-between;
   padding: 1rem 1rem;
+    background-color: #D51C24 !important;
+    color: #fff !important;
   border-bottom: 1px solid #dee2e6;
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: calc(0.3rem - 1px);
@@ -11043,6 +11045,18 @@ a.text-dark:focus {
     text-align: center;
     color: #fff;
     font-weight: 700;
+}
+
+
+.card{
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
+.card-header{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 @media only screen and (max-width: 1025px) {
