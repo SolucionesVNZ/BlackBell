@@ -17,7 +17,12 @@ class DatabaseSeeder extends Seeder
             DisciplinaSeeder::class,
             MembresiaSeeder::class,
             MethodPaySeeder::class,
+            NivelSeeder::class,
+            TipoDocumentoSeeder::class,
             ProductoSeeder::class,
+            DepartamentoSeeder::class,
+            ProvinciaSeeder::class,
+            DistritoSeeder::class
         ]);
     }
 }

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class TipoDocumentoSeeder extends Seeder
 {
@@ -13,15 +14,15 @@ class TipoDocumentoSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('membresia')->insert([
+        DB::table('tipo_documento')->insert([
             'descripcion' => 'DNI'
         ]);
 
-        DB::table('membresia')->insert([
+        DB::table('tipo_documento')->insert([
             'descripcion' => 'Carnet de extrangeria'
         ]);
 
-        DB::table('membresia')->insert([
+        DB::table('tipo_documento')->insert([
             'descripcion' => 'Pasaporte'
         ]);
     }

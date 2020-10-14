@@ -14,24 +14,73 @@ class ProductoSeeder extends Seeder
      */
     public function run()
     {
-        //KARATE
+        //KARATE BASICO
         DB::table('producto')->insert([
             'fk_disciplina' => 1,
+            'fk_nivel' => 1,
             'fk_membresia' => 1,
             'precio' => 129.00,
-            'descripcion' => 'Karate Basico - Mensual',
+            'descripcion' => '4 clases en vivo <br>Acceso al campus virtual',
         ]);
         DB::table('producto')->insert([
             'fk_disciplina' => 1,
+            'fk_nivel' => 1,
             'fk_membresia' => 2,
             'precio' => 349.00,
-            'descripcion' => 'Karate Intermedio - Trimestral',
+            'descripcion' => '12 clases en vivo <br>Acceso al campus virtual<br>Evaluación de grado',
         ]);
         DB::table('producto')->insert([
             'fk_disciplina' => 1,
+            'fk_nivel' => 1,
             'fk_membresia' => 3,
             'precio' => 699.00,
-            'descripcion' => 'Karate Avanzado - Semestral',
+            'descripcion' => '24 clases en vivo <br>Acceso al campus virtual<br>Evaluación de grado',
+        ]);
+
+        //KARATE INTERMEDIO
+        DB::table('producto')->insert([
+            'fk_disciplina' => 1,
+            'fk_nivel' => 2,
+            'fk_membresia' => 1,
+            'precio' => 149.00,
+            'descripcion' => '4 clases en vivo <br>Acceso al campus virtual',
+        ]);
+        DB::table('producto')->insert([
+            'fk_disciplina' => 1,
+            'fk_nivel' => 2,
+            'fk_membresia' => 2,
+            'precio' => 369.00,
+            'descripcion' => '12 clases en vivo <br>Acceso al campus virtual<br>Evaluación de grado',
+        ]);
+        DB::table('producto')->insert([
+            'fk_disciplina' => 1,
+            'fk_nivel' => 2,
+            'fk_membresia' => 3,
+            'precio' => 719.00,
+            'descripcion' => '24 clases en vivo <br>Acceso al campus virtual<br>Evaluación de grado',
+        ]);
+
+        //KARATE AVANZADO
+        DB::table('producto')->insert([
+            'fk_disciplina' => 1,
+            'fk_nivel' => 3,
+            'fk_membresia' => 1,
+            'precio' => 169.00,
+            'descripcion' => '4 clases en vivo <br>Acceso al campus virtual',
+        ]);
+        DB::table('producto')->insert([
+            'fk_disciplina' => 1,
+            'fk_nivel' => 3,
+            'fk_membresia' => 2,
+            'precio' => 389.00,
+            'descripcion' => '12 clases en vivo <br>Acceso al campus virtual<br>Evaluación de grado',
+        ]);
+        DB::table('producto')->insert([
+            'fk_disciplina' => 1,
+            'fk_nivel' => 3,
+            'fk_membresia' => 3,
+            'precio' => 739.00,
+            'descripcion' => '24 clases en vivo <br>Acceso al campus virtual<br>Evaluación de grado',
         ]);
 
         //MUAY THAI
