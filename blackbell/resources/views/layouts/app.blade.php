@@ -133,10 +133,10 @@ use Illuminate\Support\Facades\DB;
                                     $cantidad = DB::table('product_shopping_cart')
                                     ->select(DB::raw('SUM(product_shopping_cart.cantidad) as cant_prod'))
                                     ->join('shopping_cart', 'product_shopping_cart.fk_shopping_cart', '=', 'shopping_cart.id')
-                                    ->where('shopping_cart.fk_usuario', '=', null)
+                                    ->where('shopping_cart.id', '=', session('idShoppingCart'))
                                     ->first();
-                                    echo $cantidad->cant_prod
                                      ?>
+                                     {{ $cantidad->cant_prod }}
                                 @else
                                    <?php
                                 $cantidad = DB::table('product_shopping_cart')
@@ -145,8 +145,8 @@ use Illuminate\Support\Facades\DB;
                                     ->join('users', 'shopping_cart.fk_usuario', '=', 'users.id')
                                     ->where('users.id', '=', Auth::user()->id)
                                     ->first();
-                                echo $cantidad->cant_prod
                                 ?>
+                                     {{ $cantidad->cant_prod }}
                                 @endguest
                             </span>
                         </a>

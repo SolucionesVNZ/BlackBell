@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\KaratebasicoController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
+use App\Models\ShoppingCart;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,18 +21,15 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/cart', function () {
-    //$value = session('key');
-    //var_dump($value);die;
-    /*
-    $produt_shopping_cart = \App\Models\ShoppingCart::find(53)->productShoppingCart;
-    foreach($produt_shopping_cart as $psc){
-        echo $psc->cantidad.' - '.$psc->product->descripcion.'<br/>';
-    }
-    */
-    return view('cart');
-})->name('cart');
+// Route para Cart
+Route::get('/cart', [App\Http\Controllers\CartController::class, 'mostrarCarrito'])
+    ->name('cart');
 
+/* Route para Orden */
+Route::get('/finalizar-compra', [App\Http\Controllers\OrdenController::class, 'mostrarCarrito'])
+    ->name('finalizar-compra');
+
+/* Route para la disciplina karate */
 Route::get('/karate/karatebasico', function () {
     return view('karate/karatebasico');
 })->name('karatebasico');
@@ -55,11 +54,6 @@ Route::get('cart/{idproducto}', [App\Http\Controllers\KaratebasicoController::cl
 /* Routes de Actualizar carrito Karate basico */
 Route::post('cart', [App\Http\Controllers\KaratebasicoController::class, 'updateCart'])
     ->name('actualizarCarritoKarateBasico');
-
-/* Route para Orden */
-Route::get('/finalizar-compra', function () {
-    return view('orden');
-})->name('finalizar-compra');
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

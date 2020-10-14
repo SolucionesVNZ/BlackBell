@@ -13,54 +13,35 @@
             </tr>
             </thead>
             <tbody>
-                <?php
-                if(Auth::check()) {
-                $usuario = Auth::user();
-                $countCart = $usuario->shoppgingCarts()->whereNull('fk_orden')->count();
-                $shoppingCart = $usuario->shoppgingCarts()->whereNull('fk_orden')->first();
-                if ($countCart > 1) {
-                    // Problemas!!!!!
-                    die('Revisar!!!');
-                }if ($countCart == 0) {
-                    die('Tu carrito esta vacio');
-                }
-                $produt_shopping_cart = $shoppingCart->productShoppingCart;
-                foreach($produt_shopping_cart as $psc){?>
-                <form method="POST" action="{{route('actualizarCarritoKarateBasico')}}">
-                    @csrf
-                <tr>
-                    <td><?php echo $psc->product->disciplina->descripcion . ' - Membresia: ' . $psc->product->membresia->descripcion;?></td>
-                    <td><?php echo 'S/.' . $psc->precio_unit;?></td>
-                    <td><input class="form-control" type="number" min="1" value="<?php echo $psc->cantidad?>"
-                               name="cantidad"/></td>
-                    <td>S/.<span id="total1"><?php echo $psc->total?></span></td>
-                    <input type="hidden" value="<?php echo $psc->product->id;?>" name="idproducto">
-                    <td> <button type="submit" class="btn btn-outline-danger">Actualizar</button>
-                        <a href="{{url('cart',['idproducto' => $psc->id ])}}" class="btn btn-outline-danger"><i
-                                class="far fa-trash-alt"></i></a></td>
-                    <input type="hidden" value="<?php echo $psc->precio_unit;?>" name="preciounit">
-                    <input type="hidden" value="<?php echo $psc->total;?>" name="totalKarateBasico">
-                </tr>
-                </form>
-                <?php }
-                ?>
+                @isset($produt_shopping_cart)
+                    @foreach($produt_shopping_cart as $psc)
+                        <form method="POST" action="{{route('actualizarCarritoKarateBasico')}}">
+                            @csrf
+                            <tr>
+                                <td> {{ $psc->product->disciplina->descripcion }} - Membresia: {{ $psc->product->membresia->descripcion }}</td>
+                                <td>S/.{{ $psc->precio_unit }}</td>
+                                <td><input class="form-control" type="number" min="1" value="{{ $psc->cantidad }}"
+                                           name="cantidad"/></td>
+                                <td>S/.<span id="total1">{{ $psc->total }}</span></td>
+                                <input type="hidden" value="{{ $psc->product->id }}" name="idproducto">
+                                <td> <button type="submit" class="btn btn-outline-danger">Actualizar</button>
+                                    <a href="{{url('cart',['idproducto' => $psc->id ])}}" class="btn btn-outline-danger"><i
+                                            class="far fa-trash-alt"></i></a></td>
+                                <input type="hidden" value="{{ $psc->precio_unit }}" name="preciounit">
+                                <input type="hidden" value="{{ $psc->total }}" name="totalKarateBasico">
+                            </tr>
+                        </form>
+                    @endforeach
+                @endisset
                 <tr>
                     <td colspan="5">
                         <div style="text-align: left">
-                            <a href="{{route('karatebasico')}}" class="btn btn-outline-secondary">Seguir
-                                comprando</a>
+                            <a href="{{route('karatebasico')}}" class="btn btn-outline-secondary">Seguir comprando</a>
                         </div>
                     </td>
                 </tr>
-            <?php
-            }else {
-                ?>
-            <?php
-            }
-            ?>
             </tbody>
         </table>
-
         <table class="table table-bordered table-responsive">
             <thead>
             <tr>
@@ -68,31 +49,14 @@
             </tr>
             </thead>
             <tbody>
-            <?php
-            if(Auth::check()) {
-            $usuario = Auth::user();
-            $countCart = $usuario->shoppgingCarts()->whereNull('fk_orden')->count();
-            $shoppingCart = $usuario->shoppgingCarts()->whereNull('fk_orden')->first();
-
-            if ($countCart > 1) {
-                // Problemas!!!!!
-                die('Revisar!!!');
-            }if ($countCart == 0) {
-                die('Tu carrito esta vacio');
-            }
-            $total = $shoppingCart->productShoppingCart()->sum('total');?>
             <tr>
                 <td>Subtotal</td>
-                <td><?php echo 'S/.' . $total ?></td>
+                <td>S/.{{  $totalShoppingCart }}</td>
             </tr>
             <tr>
                 <td>Total</td>
-                <td><?php echo 'S/.' . $total ?></td>
+                <td>S/.{{ $totalShoppingCart }}</td>
             </tr>
-            <?php
-            }
-            ?>
-
             <tr>
                 <td colspan="2">
                     <a href="{{route('finalizar-compra')}}" class="btn btn-danger">Continuar la compra</a>

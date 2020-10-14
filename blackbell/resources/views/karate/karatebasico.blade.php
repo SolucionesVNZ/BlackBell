@@ -110,34 +110,31 @@ use Illuminate\Support\Facades\DB;
             </div>
             <?php
             $products = \App\Models\Producto::get();
-            foreach($products as $ps){
             ?>
+            @foreach ($products as $ps)
             <form method="POST" action="{{route('agregarCarritoKarateBasico')}}">
                 @csrf
             <div class="row packec">
                 <div class="col-md-6">
-                    <b style="  text-transform: uppercase;"><?php echo $ps->membresia->descripcion ?>:</b><br>
-                    <?php echo $ps->descripcion ?>
+                    <b style="  text-transform: uppercase;">{{ $ps->membresia->descripcion }}:</b><br>
+                    {!! $ps->descripcion !!}
                     <div style="margin-top: 20px">
                         <input type="hidden" value="1" name="cantidad"/>
-                        <input type="hidden" value="<?php echo $ps->id;?>" name="idproducto">
-                        <input type="hidden" value="<?php echo $ps->precio;?>" name="preciounit">
-                        <input type="hidden" value="<?php echo $ps->precio;?>" name="totalKarateBasico">
-                        <!--<input type="hidden" value="<?php if(isset(Auth::user()->id)){ echo Auth::user()->id; }else{ echo null; } ?>" name="idusuario">-->
+                        <input type="hidden" value="{{$ps->id}}" name="idproducto">
+                        <input type="hidden" value="{{$ps->precio}}" name="preciounit">
+                        <input type="hidden" value="{{$ps->precio}}" name="totalKarateBasico">
                         <button type="submit" class="btn btn-dark">
                             Añadir al carrito | <i class="fas fa-shopping-cart"></i>
                         </button>
                     </div>
                 </div>
                 <div class="col-md-6 packec2">
-                    <span class="precios"><?php echo $ps->precio?></span>
+                    <span class="precios">{{$ps->precio}}</span>
                 </div>
             </div>
             </form>
             <hr>
-            <?php
-            }
-            ?>
+            @endforeach
         </div>
     </div>
     <div class="banner-disciplina bdisc2">

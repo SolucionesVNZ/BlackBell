@@ -13,10 +13,10 @@
                         $cantidad = DB::table('product_shopping_cart')
                             ->select(DB::raw('SUM(product_shopping_cart.cantidad) as cant_prod'))
                             ->join('shopping_cart', 'product_shopping_cart.fk_shopping_cart', '=', 'shopping_cart.id')
-                            ->where('shopping_cart.fk_usuario', '=', null)
+                            ->where('shopping_cart.id', '=', session('idShoppingCart'))
                             ->first();
-                        echo $cantidad->cant_prod
                         ?>
+                        {{$cantidad->cant_prod}}
                     @else
                         <?php
                         $cantidad = DB::table('product_shopping_cart')
@@ -25,69 +25,35 @@
                             ->join('users', 'shopping_cart.fk_usuario', '=', 'users.id')
                             ->where('users.id', '=', Auth::user()->id)
                             ->first();
-                        echo $cantidad->cant_prod
                         ?>
+                        {{$cantidad->cant_prod}}
                     @endguest
                 </span>
             </h4>
             <ul class="list-group mb-3">
-                <?php
-                if(Auth::check()) {
-                    $usuario = Auth::user();
-                    $countCart = $usuario->shoppgingCarts()->whereNull('fk_orden')->count();
-                    $shoppingCart = $usuario->shoppgingCarts()->whereNull('fk_orden')->first();
-                    if ($countCart > 1) {
-                        // Problemas!!!!!
-                        die('Revisar!!!');
-                    }if ($countCart == 0) {
-                        die('Tu carrito esta vacio');
-                    }
-                    $produt_shopping_cart = $shoppingCart->productShoppingCart;
-                    foreach($produt_shopping_cart as $psc){?>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                    <div>
-                        <h6 class="my-0"><?php echo $psc->product->disciplina->descripcion;?></h6>
-                        <small class="text-muted"><?php echo 'Membresia: '.$psc->product->membresia->descripcion;?></small>
-                    </div>
-                    <span class="text-muted"><?php echo $psc->cantidad?> x <?php echo $psc->precio_unit;?>
+                @foreach($produt_shopping_cart as $psc)
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{$psc->product->disciplina->descripcion}}</h6>
+                            <small class="text-muted">Membresia: {{$psc->product->membresia->descripcion}}</small>
+                        </div>
+                        <span class="text-muted">{{$psc->cantidad}} x {{$psc->precio_unit}}
                         <br>
-                        <small class="text-muted"><?php echo 'S/.'.$psc->total;?></small>
+                        <small class="text-muted">S/. {{$psc->total}}</small>
                     </span>
-                </li>
-                <?php }
-                ?>
-                    <?php
-                    }else {
-                        ?>
-            <?php
-                    }
-                    ?>
-                    <?php
-                    if(Auth::check()) {
-                        $usuario = Auth::user();
-                        $countCart = $usuario->shoppgingCarts()->whereNull('fk_orden')->count();
-                        $shoppingCart = $usuario->shoppgingCarts()->whereNull('fk_orden')->first();
+                    </li>
+                @endforeach
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Total</span>
+                        <strong>S/.{{$totalShoppingCart}}</strong>
+                    </li>
 
-                        if ($countCart > 1) {
-                            // Problemas!!!!!
-                            die('Revisar!!!');
-                        }if ($countCart == 0) {
-                            die('Tu carrito esta vacio');
-                        }
-                        $total = $shoppingCart->productShoppingCart()->sum('total');?>
-                <li class="list-group-item d-flex justify-content-between">
-                    <span>Total</span>
-                    <strong><?php echo 'S/.' . $total ?></strong>
-                </li>
-                    <?php
-                    }
-                    ?>
+
             </ul>
-
         </div>
         <div class="col-md-8 order-md-1">
             @guest
-                <p class="text-right" style="padding: 30px 30px 0px 30px">¿Ya tienes cuenta? <a href="#"  style="color: #D51C24;">Iniciar Sesión</a></p>
+                <p class="text-right" style="padding: 30px 30px 0px 30px">Â¿Ya tienes cuenta? <a href="#"  style="color: #D51C24;">Iniciar SesiÃ³n</a></p>
             @else
                 <p class="text-right" style="padding: 30px 30px 0px 30px">Hola {{ Auth::user()->name }} {{ Auth::user()->lastname }}</p>
 
@@ -126,7 +92,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="firstName">Teléfono</label>
+                        <label for="firstName">TelÃ©fono</label>
                         <input type="text" class="form-control" id="phone" placeholder="" value="" required>
                         <div class="invalid-feedback">
                             Valid first name is required.

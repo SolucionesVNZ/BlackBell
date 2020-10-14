@@ -55,7 +55,7 @@ class KaratebasicoController
             // NO
                 $value = session('idShoppingCart');
                 // Tiene en sesion ID de carrito?
-                if(isNull($value)){
+                if(!session('idShoppingCart')){
                 // Es nulo
                     // Crear carrito
                     $shoppingCart = new ShoppingCart();
