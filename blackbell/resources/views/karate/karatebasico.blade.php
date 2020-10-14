@@ -109,7 +109,7 @@ use Illuminate\Support\Facades\DB;
             <img src="../../img/portada/banner/membresias.png" alt="innovacion" class="tusobjetivos limg1"/>
             </div>
             <?php
-            $products = \App\Models\Producto::get();
+            $products = \App\Models\Producto::where('fk_nivel', 1)->get();
             ?>
             @foreach ($products as $ps)
             <form method="POST" action="{{route('agregarCarritoKarateBasico')}}">
@@ -148,11 +148,8 @@ use Illuminate\Support\Facades\DB;
                 </div>
                 <div class="col-md-7 packec3">
                     <b>GUILLERMO DE VETTORI:</b><br>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed Lorem ipsum dolor sit amet,
-                    consectetuer adipiscing elit, sed Lorem ipsum dolor sit amet, amet, consectetuer
-                    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                    suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.<br>
+                    Presidente de la Asociación Peruana de Karate Do Tradicional, seleccionado Nacional de Karate Tradicional con 30 años de experiencia.
+                    Bicampeón Panamericano Kumite por Equipos ITKF 2007 y WTKF 2019 Instructor y Director del Dojo APKT.<br>
                     <br>
                     <b>Conoce el temario:</b> <a class="btn btn-dark">Aquí</a>
                 </div>

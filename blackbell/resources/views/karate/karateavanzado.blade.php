@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="../../img/portada/banner/karateavanzado.png" alt="karate" class="karate-img"/>
+                    <img src="../../img/portada/disciplina/karate-c.png" alt="karate" class="karate-img"/>
                 </div>
                 <div class="col-md-6">
                     <div class="form-a form-b lform">
@@ -76,8 +76,9 @@
             <div class="container-karate">
                 <img src="../../img/portada/banner/titulodirigido.png" alt="innovacion" class="tusobjetivos limg2"/>
             </div>
-            <p class="text-dirigido">Este curso va dirigido  a todas las personas que tengan un conocimiento avanzado
-                en el deporte <b>(karate)</b> y quieran continuar aprendiendo nuevas técnicas. Practicando esta disciplina
+            <p class="text-dirigido">Este curso va dirigido a todas las personas que tengan un conocimiento avanzado
+                en el deporte <b>(karate)</b> y quieran continuar aprendiendo nuevas técnicas. Practicando esta
+                disciplina
                 de la mano de profesores expertos en el campo.</p>
         </div>
     </div>
@@ -86,49 +87,33 @@
             <div class="container-karate">
                 <img src="../../img/portada/banner/membresias.png" alt="innovacion" class="tusobjetivos limg1"/>
             </div>
-            <div class="row packec">
-                <div class="col-md-6">
-                    <b>MENSUAL:</b><br>
-                    4 clases en vivo<br>
-                    Acceso al campus virtual
-                    <div style="margin-top: 20px">
-                        <button type="button" class="btn btn-dark">Añadir al carrito | <i class="fas fa-shopping-cart"></i></button>
+            <?php
+            $products = \App\Models\Producto::where('fk_nivel', 3)->get();
+            ?>
+            @foreach ($products as $ps)
+                <form method="POST" action="{{route('agregarCarritoKarateBasico')}}">
+                    @csrf
+                    <div class="row packec">
+                        <div class="col-md-6">
+                            <b style="  text-transform: uppercase;">{{ $ps->membresia->descripcion }}:</b><br>
+                            {!! $ps->descripcion !!}
+                            <div style="margin-top: 20px">
+                                <input type="hidden" value="1" name="cantidad"/>
+                                <input type="hidden" value="{{$ps->id}}" name="idproducto">
+                                <input type="hidden" value="{{$ps->precio}}" name="preciounit">
+                                <input type="hidden" value="{{$ps->precio}}" name="totalKarateBasico">
+                                <button type="submit" class="btn btn-dark">
+                                    Añadir al carrito | <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6 packec2">
+                            <span class="precios">{{$ps->precio}}</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 packec2">
-                    <span class="precios">S/.169</span>
-                </div>
-            </div>
-            <hr>
-            <div class="row packec">
-                <div class="col-md-6 ">
-                    <b>TRIMESTRAL:</b><br>
-                    12 clases en vivo<br>
-                    Acceso al campus virtual<br>
-                    Evaluación de grado
-                    <div style="margin-top: 20px">
-                        <button type="button" class="btn btn-dark">Añadir al carrito | <i class="fas fa-shopping-cart"></i></button>
-                    </div>
-                </div>
-                <div class="col-md-6 packec2">
-                    <span class="precios">S/.389</span>
-                </div>
-            </div>
-            <hr>
-            <div class="row packec">
-                <div class="col-md-6">
-                    <b>SEMESTRAL:</b><br>
-                    24 clases en vivo<br>
-                    Acceso al campus virtual<br>
-                    Evaluación de grado
-                    <div style="margin-top: 20px">
-                        <button type="button" class="btn btn-dark">Añadir al carrito | <i class="fas fa-shopping-cart"></i></button>
-                    </div>
-                </div>
-                <div class="col-md-6 packec2">
-                    <span class="precios">S/.739</span>
-                </div>
-            </div>
+                </form>
+                <hr>
+            @endforeach
         </div>
     </div>
     <div class="banner-disciplina bdisc2">
@@ -142,11 +127,8 @@
                 </div>
                 <div class="col-md-7 packec3">
                     <b>GUILLERMO DE VETTORI:</b><br>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed Lorem ipsum dolor sit amet,
-                    consectetuer adipiscing elit, sed Lorem ipsum dolor sit amet, amet, consectetuer
-                    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                    suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.<br>
+                    Presidente de la Asociación Peruana de Karate Do Tradicional, seleccionado Nacional de Karate Tradicional con 30 años de experiencia.
+                    Bicampeón Panamericano Kumite por Equipos ITKF 2007 y WTKF 2019 Instructor y Director del Dojo APKT.<br>
                     <br>
                     <b>Conoce el temario:</b> <a class="btn btn-dark">Aquí</a>
                 </div>

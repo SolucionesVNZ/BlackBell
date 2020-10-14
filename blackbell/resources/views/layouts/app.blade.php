@@ -74,9 +74,9 @@ use Illuminate\Support\Facades\DB;
                                 {{ __('Muay Thai') }}
                             </a>
                             <div class="dropdown-menu submenu2" aria-labelledby="submenu2">
-                                <a class="dropdown-item" href="#">{{ __('Muay Thai Basico') }}</a>
-                                <a class="dropdown-item" href="#">{{ __('Muay Thai Intermedio') }}</a>
-                                <a class="dropdown-item" href="#">{{ __('Muay Thai Avanzado') }}</a>
+                                <a class="dropdown-item" href="{{ route('muaythai-basico') }}">{{ __('Muay Thai Basico') }}</a>
+                                <a class="dropdown-item" href="{{ route('muaythai-intermedio') }}">{{ __('Muay Thai Intermedio') }}</a>
+                                <a class="dropdown-item" href="{{ route('muaythai-avanzado') }}">{{ __('Muay Thai Avanzado') }}</a>
                             </div>
                         </div>
                     </li>
@@ -136,7 +136,11 @@ use Illuminate\Support\Facades\DB;
                                     ->where('shopping_cart.id', '=', session('idShoppingCart'))
                                     ->first();
                                      ?>
-                                     {{ $cantidad->cant_prod }}
+                                    @if($cantidad->cant_prod < 1)
+                                         0
+                                        @else
+                                        {{ $cantidad->cant_prod }}
+                                    @endif
                                 @else
                                    <?php
                                 $cantidad = DB::table('product_shopping_cart')
@@ -146,7 +150,11 @@ use Illuminate\Support\Facades\DB;
                                     ->where('users.id', '=', Auth::user()->id)
                                     ->first();
                                 ?>
-                                     {{ $cantidad->cant_prod }}
+                                       @if($cantidad->cant_prod < 1)
+                                           0
+                                       @else
+                                           {{ $cantidad->cant_prod }}
+                                       @endif
                                 @endguest
                             </span>
                         </a>

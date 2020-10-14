@@ -29,18 +29,31 @@ Route::get('/cart', [App\Http\Controllers\CartController::class, 'mostrarCarrito
 Route::get('/finalizar-compra', [App\Http\Controllers\OrdenController::class, 'mostrarCarrito'])
     ->name('finalizar-compra');
 
-/* Route para la disciplina karate */
-Route::get('/karate/karatebasico', function () {
+/* Route para la disciplina KARATE */
+Route::get('/karate-basico', function () {
     return view('karate/karatebasico');
 })->name('karatebasico');
 
-Route::get('/karate/karateintermedio', function () {
+Route::get('/karate-intermedio', function () {
     return view('karate/karateintermedio');
 })->name('karateintermedio');
 
-Route::get('/karate/karateavanzado', function () {
+Route::get('/karate-avanzado', function () {
     return view('karate/karateavanzado');
 })->name('karateavanzado');
+
+/* Route para la disciplina MUAY THAI */
+Route::get('/muaythai-basico', function () {
+    return view('muaythai/muaythaibasico');
+})->name('muaythai-basico');
+
+Route::get('/muaythai-intermedio', function () {
+    return view('muaythai/muaythaiintermedio');
+})->name('muaythai-intermedio');
+
+Route::get('/muaythai-avanzado', function () {
+    return view('muaythai/muaythaiavanzado');
+})->name('muaythai-avanzado');
 
 Route::post('contacts', [App\Http\Controllers\FormController::class, 'guardar'])
     ->name('guardarFormulario');

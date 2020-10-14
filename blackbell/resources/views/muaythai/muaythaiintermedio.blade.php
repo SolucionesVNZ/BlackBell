@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="../../img/portada/banner/karate-intermedio.png" alt="karate" class="karate-img"/>
+                    <img src="../../img/muaythai/muaythai-intermedio.png" alt="karate" class="karate-img"/>
                 </div>
                 <div class="col-md-6">
                     <div class="form-a form-b lform">
@@ -74,7 +74,7 @@
     <div class="dirigido">
         <div class="container">
             <div class="container-karate">
-                <img src="../../img/portada/banner/titulodirigido.png" alt="innovacion" class="tusobjetivos limg2"/>
+                <img src="../../img/muaythai/aquienvadirigido.png" alt="innovacion" class="tusobjetivos limg2"/>
             </div>
             <p class="text-dirigido">Este curso va dirigido  a todas las personas que tengan un conocimiento intermedio
                 en el deporte <b>(karate)</b> y quieran continuar aprendiendo nuevas técnicas. <br>Practicando esta disciplina de

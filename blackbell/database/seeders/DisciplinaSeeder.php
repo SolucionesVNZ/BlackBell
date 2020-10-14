@@ -18,7 +18,7 @@ class DisciplinaSeeder extends Seeder
             'descripcion' => 'Karate'
         ]);
         DB::table('disciplina')->insert([
-            'descripcion' => 'Kun Fu'
+            'descripcion' => 'Muay Thai'
         ]);
         DB::table('disciplina')->insert([
             'descripcion' => 'Taekwondo'

@@ -33,6 +33,11 @@
                         </form>
                     @endforeach
                 @endisset
+                @if($totalShoppingCart == 0)
+                   <tr>
+                       <td colspan="5"> Aun no has agregado productos a tu carrito de compras.</td>
+                   </tr>
+                @endif
                 <tr>
                     <td colspan="5">
                         <div style="text-align: left">
@@ -57,11 +62,19 @@
                 <td>Total</td>
                 <td>S/.{{ $totalShoppingCart }}</td>
             </tr>
+            @if($totalShoppingCart > 0)
             <tr>
                 <td colspan="2">
                     <a href="{{route('finalizar-compra')}}" class="btn btn-danger">Continuar la compra</a>
                 </td>
             </tr>
+            @else
+            <tr>
+                <td colspan="2">
+                    <a href="#" class="btn btn-danger disabled">Continuar la compra</a>
+                </td>
+            </tr>
+            @endif
             </tbody>
         </table>
     </div>
