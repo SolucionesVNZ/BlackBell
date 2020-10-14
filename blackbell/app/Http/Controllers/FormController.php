@@ -11,15 +11,7 @@ class FormController extends Controller
 
     public function guardar(Request $request)
     {
-        //forma 1 de llamar el input
-        //$name = $request->input('name');
-        //$lastname = $request->lastname;
-        //$email = $request->input('email');
-        //$phone = $request->input('phone');
-        //$membresia = $request->input('membresia');
-        //$disciplina = $request->input('disciplina');
-
-        $validatedData = $request->validate([
+        $request->validate([
             'name' => 'required',
             'lastname' => 'required',
             'phone' => 'required|unique:contactos,telefono',

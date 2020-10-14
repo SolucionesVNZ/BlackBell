@@ -18,8 +18,8 @@ class ProductShoppingCart extends Migration
             $table->unsignedBigInteger('fk_shopping_cart');
             $table->unsignedBigInteger('fk_producto');
             $table->integer('cantidad');
-            $table->double('precio_unit', 5,2)->nullable()->default(null);
-            $table->double('total', 5,2)->nullable()->default(null);
+            $table->double('precio_unit', 7,2)->nullable()->default(null);
+            $table->double('total', 7,2)->nullable()->default(null);
             $table->timestamps();
             $table->foreign('fk_shopping_cart')->references('id')->on('shopping_cart');
             $table->foreign('fk_producto')->references('id')->on('producto');

@@ -42,4 +42,12 @@ class User extends Authenticatable
     {
         $this->notify(new ResetPassword($token));
     }
+
+    public function shoppgingCarts(){
+        return $this->hasMany('App\Models\ShoppingCart','fk_usuario','id');
+    }
+
+    public function orders(){
+        return $this->hasMany('App\Models\Orden','fk_usuario','id');
+    }
 }

@@ -16,11 +16,13 @@ class Producto extends Migration
         Schema::create('producto', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('fk_disciplina');
+            $table->unsignedBigInteger('fk_nivel');
             $table->unsignedBigInteger('fk_membresia');
             $table->double('precio', 5,2);
             $table->string('descripcion', 200);
             $table->timestamps();
             $table->foreign('fk_disciplina')->references('id')->on('disciplina');
+            $table->foreign('fk_nivel')->references('id')->on('nivel');
             $table->foreign('fk_membresia')->references('id')->on('membresia');
         });
     }

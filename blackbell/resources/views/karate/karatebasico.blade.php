@@ -3,7 +3,27 @@ use Illuminate\Support\Facades\DB;
 ?>
 @extends('layouts.app')
 @section('content')
-    <div class="banner-principal bdisc">
+    @if (session('successKarateBasico'))
+    <div id="id03" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container">
+                <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <p style="padding: 30px; text-align: center;"> {{ session('successKarateBasico') }}
+                <div class="row text-center" >
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-outline-danger" onclick="document.getElementById('id03').style.display='none'">Seguir comprando</button>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="{{ route('cart') }}" class="btn btn-outline-danger">Ir a mi carrito</a>
+                    </div>
+                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script> document.getElementById('id03').style.display='block' </script>
+    @endif
+       <div class="banner-principal bdisc">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -88,55 +108,36 @@ use Illuminate\Support\Facades\DB;
             <div class="container-karate">
             <img src="../../img/portada/banner/membresias.png" alt="innovacion" class="tusobjetivos limg1"/>
             </div>
+            <?php
+            $products = \App\Models\Producto::get();
+            foreach($products as $ps){
+            ?>
+            <form method="POST" action="{{route('agregarCarritoKarateBasico')}}">
+                @csrf
             <div class="row packec">
                 <div class="col-md-6">
-                    <b>MENSUAL:</b><br>
-                    4 clases en vivo<br>
-                    Acceso al campus virtual
-                <div style="margin-top: 20px">
-                    <a type="button" class="btn btn-dark" data-toggle="modal" data-target="#agregarCarritoKarateBasico">
-                        Añadir al carrito | <i class="fas fa-shopping-cart"></i>
-                    </a>
-                </div>
-                </div>
-                <div class="col-md-6 packec2">
-                    <span class="precios">S/.129</span>
-                </div>
-            </div>
-            <hr>
-            <div class="row packec">
-                <div class="col-md-6 ">
-                    <b>TRIMESTRAL:</b><br>
-                    12 clases en vivo<br>
-                    Acceso al campus virtual<br>
-                    Evaluación de grado
+                    <b style="  text-transform: uppercase;"><?php echo $ps->membresia->descripcion ?>:</b><br>
+                    <?php echo $ps->descripcion ?>
                     <div style="margin-top: 20px">
-                        <a type="button" class="btn btn-dark" data-toggle="modal" data-target="#agregarCarritoKarateIntermedio">
+                        <input type="hidden" value="1" name="cantidad"/>
+                        <input type="hidden" value="<?php echo $ps->id;?>" name="idproducto">
+                        <input type="hidden" value="<?php echo $ps->precio;?>" name="preciounit">
+                        <input type="hidden" value="<?php echo $ps->precio;?>" name="totalKarateBasico">
+                        <!--<input type="hidden" value="<?php if(isset(Auth::user()->id)){ echo Auth::user()->id; }else{ echo null; } ?>" name="idusuario">-->
+                        <button type="submit" class="btn btn-dark">
                             Añadir al carrito | <i class="fas fa-shopping-cart"></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <div class="col-md-6 packec2">
-                    <span class="precios">S/.349</span>
+                    <span class="precios"><?php echo $ps->precio?></span>
                 </div>
             </div>
+            </form>
             <hr>
-            <div class="row packec">
-                <div class="col-md-6">
-                    <b>SEMESTRAL:</b><br>
-                    24 clases en vivo<br>
-                    Acceso al campus virtual<br>
-                    Evaluación de grado
-                    <div style="margin-top: 20px">
-                        <a type="button" class="btn btn-dark" data-toggle="modal" data-target="#agregarCarritoKarateAvanzado">
-                            Añadir al carrito | <i class="fas fa-shopping-cart"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 packec2">
-                    <span class="precios">S/.699</span>
-                </div>
-            </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
     <div class="banner-disciplina bdisc2">
@@ -162,7 +163,7 @@ use Illuminate\Support\Facades\DB;
         </div>
     </div>
 
-    <!----------- MODAL PARA KARATE BASICO ---------------->
+    <!----------- MODAL PARA KARATE BASICO ------------
     <div class="modal fade" id="agregarCarritoKarateBasico" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -172,7 +173,7 @@ use Illuminate\Support\Facades\DB;
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form method="POST" action="">
+                <form method="POST" action="{{route('agregarCarritoKarateBasico')}}">
                     @csrf
                 <div class="modal-body">
                     <div class="table-responsive">
@@ -193,9 +194,12 @@ use Illuminate\Support\Facades\DB;
                         <tr>
                             <td><?php echo $producto->descripcion;?></td>
                             <td><?php echo 'S/.'.$producto->precio;?></td>
-                            <td><input class="form-control" type="number" min="1" value="1" id="cantidad1" oninput="calc1()"/></td>
+                            <td><input class="form-control" type="number" min="1" value="1" id="cantidad1" name="cantidad" oninput="calc1()"/></td>
                             <td>S/.<span id="total1">129</span></td>
-                            <input type="hidden" id="totalKarateBasico" value="" name="totalKarateBasico">
+                            <input type="hidden" value="<?php echo $producto->id;?>" name="idproducto">
+                            <input type="hidden" value="<?php echo $producto->precio;?>" name="preciounit">
+                            <input type="hidden" id="totalKarateBasico" value="129" name="totalKarateBasico">
+                            <input type="hidden" value="<?php if(isset(Auth::user()->id)){ echo Auth::user()->id; }else{ echo null; } ?>" name="idusuario">
                             <script>
                                 function calc1() {
                                     cant = document.getElementById("cantidad1").value;
@@ -218,8 +222,8 @@ use Illuminate\Support\Facades\DB;
             </div>
         </div>
     </div>
-
-    <!----------- MODAL PARA KARATE INTERMEDIO ---------------->
+    ---->
+    <!----------- MODAL PARA KARATE INTERMEDIO ------------
     <div class="modal fade" id="agregarCarritoKarateIntermedio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -270,8 +274,8 @@ use Illuminate\Support\Facades\DB;
             </div>
         </div>
     </div>
-
-    <!----------- MODAL PARA KARATE AVANZADO ---------------->
+    ---->
+    <!----------- MODAL PARA KARATE AVANZADO ------------
     <div class="modal fade" id="agregarCarritoKarateAvanzado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -322,5 +326,5 @@ use Illuminate\Support\Facades\DB;
             </div>
         </div>
     </div>
-
+    ---->
 @endsection

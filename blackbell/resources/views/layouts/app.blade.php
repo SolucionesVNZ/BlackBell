@@ -1,3 +1,6 @@
+<?php
+use Illuminate\Support\Facades\DB;
+?>
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -11,6 +14,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/form-validation.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,9 +22,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/w3.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/form-validation.css')}}" rel="stylesheet">
     <link href="{{ asset('fontawesome/css/fontawesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('fontawesome/css/all.min.css') }}" rel="stylesheet">
-
 </head>
 <body>
 <div id="app">
@@ -121,7 +126,30 @@
                     @endguest
 
                     <li class="nav-item">
-                        <a class="nav-link" href="">| <i class="fa fa-shopping-cart"></i> <span class="badge badge-light">0</span></a>
+                        <a class="nav-link" href="{{ route('cart') }}">| <i class="fa fa-shopping-cart"></i>
+                            <span class="badge badge-light">
+                                 @guest
+                                     <?php
+                                    $cantidad = DB::table('product_shopping_cart')
+                                    ->select(DB::raw('SUM(product_shopping_cart.cantidad) as cant_prod'))
+                                    ->join('shopping_cart', 'product_shopping_cart.fk_shopping_cart', '=', 'shopping_cart.id')
+                                    ->where('shopping_cart.fk_usuario', '=', null)
+                                    ->first();
+                                    echo $cantidad->cant_prod
+                                     ?>
+                                @else
+                                   <?php
+                                $cantidad = DB::table('product_shopping_cart')
+                                    ->select(DB::raw('SUM(product_shopping_cart.cantidad) as cant_prod'))
+                                    ->join('shopping_cart', 'product_shopping_cart.fk_shopping_cart', '=', 'shopping_cart.id')
+                                    ->join('users', 'shopping_cart.fk_usuario', '=', 'users.id')
+                                    ->where('users.id', '=', Auth::user()->id)
+                                    ->first();
+                                echo $cantidad->cant_prod
+                                ?>
+                                @endguest
+                            </span>
+                        </a>
                     </li>
                 </ul>
             </div>
