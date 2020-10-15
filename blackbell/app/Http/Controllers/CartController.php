@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 
 
 use App\Models\ShoppingCart;
+use Illuminate\Database\QueryException;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class CartController
@@ -40,5 +42,31 @@ class CartController
             }
         }
         return view('cart',['produt_shopping_cart' => $produt_shopping_cart, 'totalShoppingCart' => $total]);
+    }
+
+    public function  updateCart(Request $request){
+        try {
+            if(Auth::check()){
+                $usuario = Auth::user();
+                $shoppingCart = $usuario->shoppgingCarts()->whereNull('fk_orden')->first();
+                $productShoppingCart = $shoppingCart->productShoppingCart()->where('fk_producto', $request->idproducto)->first();
+                $productShoppingCart->cantidad = $request->cantidad;
+                $productShoppingCart->total = $request->cantidad * $request->preciounit;
+                $productShoppingCart->save();
+            }else{
+                if (session('idShoppingCart')) {
+                    $shoppingCart = ShoppingCart::find(session('idShoppingCart'));
+                    $productShoppingCart = $shoppingCart->productShoppingCart()->where('fk_producto', $request->idproducto)->first();
+                    $productShoppingCart->cantidad = $request->cantidad;
+                    $productShoppingCart->total = $request->cantidad * $request->preciounit;
+                    $productShoppingCart->save();
+                }
+            }
+            return redirect()->route('cart');
+        }catch (QueryException $e) {
+            var_dump('error');die;
+            return redirect()->route('cart');
+        }
+
     }
 }

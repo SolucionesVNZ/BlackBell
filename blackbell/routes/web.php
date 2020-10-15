@@ -65,7 +65,7 @@ Route::post('karatebasico', [App\Http\Controllers\KaratebasicoController::class,
 Route::get('cart/{idproducto}', [App\Http\Controllers\KaratebasicoController::class, 'quitarproducto'])
     ->name('quitarProductoKarateBasico');
 /* Routes de Actualizar carrito Karate basico */
-Route::post('cart', [App\Http\Controllers\KaratebasicoController::class, 'updateCart'])
+Route::post('cart', [App\Http\Controllers\CartController::class, 'updateCart'])
     ->name('actualizarCarritoKarateBasico');
 
 Auth::routes();

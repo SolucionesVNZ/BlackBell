@@ -87,7 +87,7 @@
                 <img src="../../img/portada/banner/membresias.png" alt="innovacion" class="tusobjetivos limg1"/>
             </div>
             <?php
-            $products = \App\Models\Producto::where('fk_nivel', 2)->get();
+            $products = \App\Models\Producto::where([['fk_disciplina', 1],['fk_nivel', 2]])->get();
             ?>
             @foreach ($products as $ps)
                 <form method="POST" action="{{route('agregarCarritoKarateBasico')}}">

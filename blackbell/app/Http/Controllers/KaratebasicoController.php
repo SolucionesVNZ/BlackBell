@@ -124,24 +124,6 @@ class KaratebasicoController
         // }
     }
 
-    public function  updateCart(Request $request){
-        try {
-            if(Auth::check()){
-                $usuario = Auth::user();
-                $shoppingCart = $usuario->shoppgingCarts()->whereNull('fk_orden')->first();
-                $productShoppingCart = $shoppingCart->productShoppingCart()->where('fk_producto', $request->idproducto)->first();
-                $productShoppingCart->cantidad = $request->cantidad;
-                $productShoppingCart->total = $request->cantidad * $request->preciounit;
-                $productShoppingCart->save();
-            }
-            return redirect()->route('cart');
-        }catch (QueryException $e) {
-            var_dump('error');die;
-            return redirect()->route('cart');
-        }
-
-    }
-
     public function quitarproducto(Request $request){
         DB::table('product_shopping_cart')
             ->where('id', '=', $request->idproducto)->delete();
