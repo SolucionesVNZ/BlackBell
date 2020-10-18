@@ -74,3 +74,19 @@ $(document).ready(function() {
         }
     });
 });
+
+$(document).ready(function() {
+    $('.pago').click(function(evento){
+        var metodoId = $(this).val();
+        if(metodoId == 1) {
+            $(".bancos").css("display", "block");
+            $(".info").css("display", "none");
+            $(".method-disponible").removeClass('disabled');
+        }else{
+            $(".bancos").css("display", "none");
+            $(".info").css("display", "block");
+            $(".method-disponible").addClass('disabled');
+            $(".method-disponible").attr('type', 'button');
+        }
+    });
+});

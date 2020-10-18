@@ -157,15 +157,16 @@
 
                 <div class="d-block my-3">
                     <div class="custom-control custom-radio">
-                        <input id="credit" name="paymentMethod" type="radio" value="1" class="custom-control-input" required>
+                        <input id="credit" name="paymentMethod" type="radio" value="1" class="custom-control-input pago" required>
                         <label class="custom-control-label" for="credit">Transferencia Bancaria</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input id="debit" name="paymentMethod" type="radio" value="2" class="custom-control-input" required>
+                        <input id="debit" name="paymentMethod" type="radio" value="2" class="custom-control-input pago" required>
                         <label class="custom-control-label" for="debit">Tarjeta de debito</label>
                     </div>
                 </div>
-                <div class="row">
+                <div class="bancos" style="display:none;">
+                <div class="row" >
                     <div class="col-md-6 mb-3">
                         <label for="cc-name">Banco de Credito</label>
                         <input type="text" class="form-control" id="cc-name" placeholder="1234-1234-1234-1234" disabled>
@@ -177,13 +178,19 @@
                         <small class="text-muted">RUC : 999999999-0</small>
                     </div>
                 </div>
+                </div>
+                <div class="info" style="display:none;">
+                <div class="row">
+                  <p>Metodo de pago aun no disponible.</p>
+                </div>
+                </div>
                 <hr class="mb-4">
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <a href="{{route('cart')}}" style="color: #D51C24;">< Volver al carrito</a>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <button class="btn btn-danger btn-lg btn-block" type="submit">Finalizar la compra </button>
+                        <button class="btn btn-danger btn-lg btn-block method-disponible" type="submit">Finalizar la compra </button>
 
                     </div>
                     </div>
