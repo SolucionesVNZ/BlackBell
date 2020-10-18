@@ -15,6 +15,10 @@ class Producto extends Model
         return $this->belongsTo('App\Models\Disciplina','fk_disciplina', 'id');
     }
 
+    public function nivel(){
+        return $this->belongsTo('App\Models\Nivel','fk_nivel', 'id');
+    }
+
     public function membresia(){
         return $this->belongsTo('App\Models\Membresia','fk_membresia', 'id');
     }

@@ -17,11 +17,11 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('lastname');
-            $table->unsignedBigInteger('fk_tipo_documento');
-            $table->string('document');
-            $table->unsignedBigInteger('fk_departamento');
-            $table->unsignedBigInteger('fk_provincia');
-            $table->unsignedBigInteger('fk_distrito');
+            $table->unsignedBigInteger('fk_tipo_documento')->nullable();
+            $table->string('document')->nullable();
+            $table->unsignedBigInteger('fk_departamento')->nullable();
+            $table->unsignedBigInteger('fk_provincia')->nullable();
+            $table->unsignedBigInteger('fk_distrito')->nullable();
             $table->string('phone');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

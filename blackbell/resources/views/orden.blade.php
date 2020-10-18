@@ -1,5 +1,10 @@
 @extends('layouts.main')
 @section('content')
+    <style>
+        #loader{
+            visibility:hidden;
+        }
+    </style>
 <div class="container">
     <h3 class="text-center" style="color:#000; font-weight: bold;">FINALIZAR COMPRA</h3>
     <hr class="separator-block">
@@ -59,20 +64,21 @@
 
             @endguest
             <h4 class="mb-3">Informacion de contacto</h4>
-            <form class="needs-validation" novalidate>
+            <form class="needs-validation" novalidate method="POST" action="{{route('crearOrden')}}">
+                    @csrf
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="firstName">Nombres</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="" value="" autocomplete="on" required>
                         <div class="invalid-feedback">
-                            Valid first name is required.
+                            Se requiere un nombre válido.
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="lastName">Apellidos</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="" value="" autocomplete="on" required>
                         <div class="invalid-feedback">
-                            Valid last name is required.
+                            Se requiere un apellido válido.
                         </div>
                     </div>
                 </div>
@@ -88,58 +94,62 @@
                                     <a class="dropdown-item" href="#">Pasaporte</a>
                                 </div>
                             </div>
-                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                            <input type="text" class="form-control" name="idcard" required>
+                            <div class="invalid-feedback">
+                                Se requiere un documento de identidad válido.
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="firstName">Teléfono</label>
-                        <input type="text" class="form-control" id="phone" placeholder="" value="" required>
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="" value="" autocomplete="on" required>
                         <div class="invalid-feedback">
-                            Valid first name is required.
+                            Se requiere un telefono válido.
                         </div>
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="email">Correo electronico </label>
-                    <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="usuario@ejemplo.com" autocomplete="on" required>
                     <div class="invalid-feedback">
-                        Please enter a valid email address for shipping updates.
+                        Ingrese una dirección de correo electrónico válida para recibir información de su compra.
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-4 mb-3">
                         <label for="country">Departamento</label>
-                        <select class="custom-select d-block w-100" id="country" required>
+                        <select class="custom-select d-block w-100" id="departament" name="departament" onchange="onDepartament()" required>
                             <option value="">Seleccione...</option>
-                            <option>United States</option>
+                            @foreach($departamentos as $departamento)
+                            <option value="{{$departamento->id}}">{{$departamento->nomDepa}}</option>
+                            @endforeach
                         </select>
                         <div class="invalid-feedback">
-                            Please select a valid country.
+                            Seleccione un departamento válido.
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
                         <label for="state">Provincia</label>
-                        <select class="custom-select d-block w-100" id="state" required>
+                        <select class="custom-select d-block w-100" id="province" name="province" required>
                             <option value="">Seleccione...</option>
-                            <option>California</option>
                         </select>
                         <div class="invalid-feedback">
-                            Please provide a valid state.
+                            Seleccione una provincia válida.
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
                         <label for="state">Distrito</label>
-                        <select class="custom-select d-block w-100" id="state" required>
+                        <select class="custom-select d-block w-100" id="distrite" name="distrite" required>
                             <option value="">Seleccione...</option>
-                            <option>California</option>
                         </select>
                         <div class="invalid-feedback">
-                            Please provide a valid state.
+                            Seleccione un distrito válido.
                         </div>
                     </div>
                 </div>
+                <div class="col-md-2"><span id="loader"><i class="fa fa-spinner fa-3x fa-spin"></i></span></div>
 
                 <hr class="mb-4">
 
@@ -147,11 +157,11 @@
 
                 <div class="d-block my-3">
                     <div class="custom-control custom-radio">
-                        <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                        <input id="credit" name="paymentMethod" type="radio" value="1" class="custom-control-input" required>
                         <label class="custom-control-label" for="credit">Transferencia Bancaria</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                        <input id="debit" name="paymentMethod" type="radio" value="2" class="custom-control-input" required>
                         <label class="custom-control-label" for="debit">Tarjeta de debito</label>
                     </div>
                 </div>

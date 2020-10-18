@@ -18,7 +18,7 @@
                         <form method="POST" action="{{route('actualizarCarritoKarateBasico')}}">
                             @csrf
                             <tr>
-                                <td> {{ $psc->product->disciplina->descripcion }} - Membresia: {{ $psc->product->membresia->descripcion }}</td>
+                                <td> {{ $psc->product->disciplina->descripcion }} {{ $psc->product->nivel->descripcion }} - Membresia: {{ $psc->product->membresia->descripcion }}</td>
                                 <td>S/.{{ $psc->precio_unit }}</td>
                                 <td><input class="form-control" type="number" min="1" value="{{ $psc->cantidad }}"
                                            name="cantidad"/></td>

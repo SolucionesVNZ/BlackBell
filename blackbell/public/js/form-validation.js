@@ -18,3 +18,59 @@
     })
   }, false)
 }())
+
+
+function onDepartament(){
+    var departamentoId = $('select[name="departament"]').val();
+    if(departamentoId) {
+        $.ajax({
+            url: '/provincias/'+departamentoId,
+            type:"GET",
+            dataType:"json",
+            beforeSend: function(){
+                $('#loader').css("visibility", "visible");
+            },
+
+            success:function(data) {
+                $('select[name="province"]').empty();
+                $('select[name="province"]').append('<option>Seleccione...</option>');
+                $.each(data, function(key, value){
+                    $('select[name="province"]').append('<option value="'+ key +'">' + value + '</option>');
+                });
+            },
+            complete: function(){
+                $('#loader').css("visibility", "hidden");
+            }
+        });
+    } else {
+        $('select[name="province"]').empty();
+    }
+};
+
+$(document).ready(function() {
+    $('select[name="province"]').on('change', function(){
+        var provinciaId = $(this).val();
+        if(provinciaId) {
+            $.ajax({
+                url: '/distritos/'+provinciaId,
+                type:"GET",
+                dataType:"json",
+                beforeSend: function(){
+                    $('#loader').css("visibility", "visible");
+                },
+                success:function(data) {
+                    $('select[name="distrite"]').empty();
+                    $('select[name="distrite"]').append('<option>Seleccione...</option>');
+                    $.each(data, function(key, value){
+                        $('select[name="distrite"]').append('<option value="'+ key +'">' + value + '</option>');
+                    });
+                },
+                complete: function(){
+                    $('#loader').css("visibility", "hidden");
+                }
+            });
+        } else {
+            $('select[name="distrite"]').empty();
+        }
+    });
+});
