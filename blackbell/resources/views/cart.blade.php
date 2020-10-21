@@ -41,7 +41,7 @@
                 <tr>
                     <td colspan="5">
                         <div style="text-align: left">
-                            <a href="{{route('karatebasico')}}" class="btn btn-outline-secondary">Seguir comprando</a>
+                            <a href="{{route('karate-basico')}}" class="btn btn-outline-secondary">Seguir comprando</a>
                         </div>
                     </td>
                 </tr>

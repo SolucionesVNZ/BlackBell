@@ -16,7 +16,7 @@ class KaratebasicoController
 {
     public function agregar(Request $request)
     {
-        // try {
+        $slug = substr($request->url, 1);
             // Esta logueado?
             if(Auth::check()){
                 //Verificar si hay id de carrito en sesion
@@ -83,45 +83,7 @@ class KaratebasicoController
                     ]);
                 }
             }
-            /*
-            $model = new ShoppingCart();
-            $model->fk_usuario = $request->idusuario;
-            $model->subtotal = $request->totalKarateBasico;
-            $model->save();
-
-            $model_producto_carrito = new ProductShoppingCart();
-            $ultimo_carrito = DB::table('shopping_cart')
-                ->join('users', 'shopping_cart.fk_usuario', '=', 'users.id')
-                ->orderBy('id','desc')
-                ->select('shopping_cart.id')
-                ->limit(1)
-                ->first();
-            if($ultimo_carrito == null){
-                $ultimo_carrito = DB::table('shopping_cart')
-                    ->orderBy('id','desc')
-                    ->select('shopping_cart.id')
-                    ->limit(1)
-                    ->first();
-            }
-            //var_dump($ultimo_carrito);die;
-            /*
-            $allCarts = ShoppingCart::all();
-            foreach($allCarts as $cart){
-                var_dump($cart->usuario->name);
-            }die();
-            */
-             /*
-            $model_producto_carrito->fk_shopping_cart = $ultimo_carrito->id;
-            $model_producto_carrito->fk_producto = $request->idproducto;
-            $model_producto_carrito->cantidad = $request->cantidad;
-            $model_producto_carrito->precio_unit = $request->preciounit;
-            $model_producto_carrito->total = $request->totalKarateBasico;
-            $model_producto_carrito->save();
-             */
-            return redirect()->route('karatebasico')->with('successKarateBasico','Se ha agregado satisfactoriamente el producto al carrito.');
-        // }catch (QueryException $e) {
-        //     return redirect()->route('karatebasico');
-        // }
+            return redirect()->route($slug)->with('successKarateBasico','Se ha agregado satisfactoriamente el producto al carrito.');
     }
 
     public function quitarproducto(Request $request){
@@ -130,6 +92,4 @@ class KaratebasicoController
         return redirect()->route('cart');
 
     }
-
-
 }

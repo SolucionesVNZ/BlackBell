@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="banner-principal">
         <div class="form-a">
@@ -36,7 +35,7 @@
                         <select id="inputState" name="disciplina" class="form-control form-blackbelt">
                             <option disabled="disabled" hidden="hidden" selected>Disciplina</option>
                             <option>Karate</option>
-                            <option>Kun fu</option>
+                            <option>Muay Thai</option>
                             <option>Taekwondo</option>
                         </select>
                     </div>
@@ -66,7 +65,7 @@
         <img src="../../img/portada/banner/tusobjetivos.png" alt="innovacion" class="tusobjetivos"/>
         <ul class="flex-container">
             <li class="flex-item">
-                <img src="../../img/portada/disciplina/defensa-personal.jpg" alt="innovacion"/>
+                <img src="../../img/defensa-personal.jpg" alt="innovacion"/>
                 <div class="disciplinas">
                 <h4 class="title-disciplina">Defensa Personal</h4>
                     <hr class="separator-block">
@@ -97,13 +96,13 @@
             <hr class="separator-block">
             <ul class="flex-container">
             <li class="flex-item-d">
-                <img src="../../img/portada/disciplina/muay-thai.jpg" alt="karate"/>
+                <img src="../../img/portada/disciplina/muay-thai.jpg" alt="muay-thai"/>
                 <div class="disciplinas">
                     <h4 class="disciplina-mk">MUAY THAI</h4>
                 </div>
             </li>
             <li class="flex-item-d">
-                <img src="../../img/portada/disciplina/karate.jpg" alt="muay-thai"/>
+                <img src="../../img/karate_2.jpg" alt="karate"/>
                 <div class="disciplinas">
                     <h4 class="disciplina-mk ">KARATE</h4>
                 </div>
@@ -127,63 +126,4 @@
             </div>
         </div>
     </div>
-  <!--  <div class="container">
-
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
-                    <div class="card-body">
-                        <form method="POST" action="{{route('guardarFormulario')}}">
-                            @csrf
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <input type="text" name="name" class="form-control" id="inputAddress"
-                                           placeholder="Nombres">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input type="text" name="lastname" class="form-control" id="inputAddress"
-                                           placeholder="Apellidos">
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <input type="email" name="email" class="form-control" id="inputEmail4"
-                                           placeholder="Email">
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <input type="text" name="phone" class="form-control" id="inputAddress"
-                                           placeholder="Teléfono">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <select id="inputState" name="membresia" class="form-control">
-                                        <option selected>Membresia</option>
-                                        <option>Mensual</option>
-                                        <option>Trimestral</option>
-                                        <option>Semestral</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <select id="inputState" name="disciplina" class="form-control">
-                                        <option selected>Disciplina</option>
-                                        <option>Karate</option>
-                                        <option>Kun fu</option>
-                                        <option>Taekwondo</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary">ENVIAR</button>
-                        </form>
-
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-                        {{ __('Tu no estas logueado!') }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
 @endsection

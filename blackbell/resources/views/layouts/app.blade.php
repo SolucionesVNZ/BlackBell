@@ -15,8 +15,6 @@ use Illuminate\Support\Facades\DB;
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/form-validation.js') }}" defer></script>
-    <script src="{{ asset('js/custom.js') }}" defer></script>
-
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -52,7 +50,7 @@ use Illuminate\Support\Facades\DB;
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home') }}">{{ __('INICIO') }} | </a>
+                        <a class="nav-link" href="{{ route('inicio') }}">{{ __('INICIO') }} | </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#"  id="navbarDropdown" role="button"
@@ -65,9 +63,9 @@ use Illuminate\Support\Facades\DB;
                                 {{ __('Karate') }}
                             </a>
                             <div class="dropdown-menu submenu1" aria-labelledby="submenu">
-                                <a class="dropdown-item" href="{{ route('karatebasico') }}">{{ __('Karate Basico') }}</a>
-                                <a class="dropdown-item" href="{{ route('karateintermedio') }}">{{ __('Karate Intermedio') }}</a>
-                                <a class="dropdown-item" href="{{ route('karateavanzado') }}">{{ __('Karate Avanzado') }}</a>
+                                <a class="dropdown-item" href="{{ route('karate-basico') }}">{{ __('Karate Básico') }}</a>
+                                <a class="dropdown-item" href="{{ route('karate-intermedio') }}">{{ __('Karate Intermedio') }}</a>
+                                <a class="dropdown-item" href="{{ route('karate-avanzado') }}">{{ __('Karate Avanzado') }}</a>
                             </div>
                             <div class="dropdown-divider"></div>
 
@@ -76,7 +74,7 @@ use Illuminate\Support\Facades\DB;
                                 {{ __('Muay Thai') }}
                             </a>
                             <div class="dropdown-menu submenu2" aria-labelledby="submenu2">
-                                <a class="dropdown-item" href="{{ route('muaythai-basico') }}">{{ __('Muay Thai Basico') }}</a>
+                                <a class="dropdown-item" href="{{ route('muaythai-basico') }}">{{ __('Muay Thai Básico') }}</a>
                                 <a class="dropdown-item" href="{{ route('muaythai-intermedio') }}">{{ __('Muay Thai Intermedio') }}</a>
                                 <a class="dropdown-item" href="{{ route('muaythai-avanzado') }}">{{ __('Muay Thai Avanzado') }}</a>
                             </div>
@@ -86,7 +84,7 @@ use Illuminate\Support\Facades\DB;
                         <a class="nav-link" href="{{ route('home') }}">| {{ __('CONTACTO') }} | </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home') }}">{{ __('CAMPUS') }} |</a>
+                        <a class="nav-link" href="{{ route('campus') }}">{{ __('CAMPUS') }} |</a>
                     </li>
 
                     @guest
@@ -194,7 +192,7 @@ use Illuminate\Support\Facades\DB;
                     <img src="{{asset('/img/logo-blanco.png')}}" alt="profile Pic" class="logo">
                     <ul class="menu-datos">
                         <li><i class="fas fa-phone-volume"></i> +(51)991 892 397</li>
-                        <li><i class="fas fa-map-marker"></i> Calle Alcanfores 140 Oficina 606 Miraflores, Lima, Peru</li>
+                        <li><i class="fas fa-map-marker"></i> Calle Teruel 370 Miraflores, Lima, Peru</li>
                         <li><i class="fas fa-envelope"></i> info@latamcoachingnetwork.com</li>
                     </ul>
                 </div>

@@ -21,7 +21,11 @@ use App\Models\ShoppingCart;
 // Route para Home
 Route::get('/', function () {
     return view('home');
-})->name('home');
+})->name('inicio');
+
+Route::get('/campus', function () {
+    return redirect()->away('https://campus.dojoblackbelt.com');
+})->name('campus');
 
 Route::post('contacts', [App\Http\Controllers\FormController::class, 'guardar'])
     ->name('guardarFormulario');
@@ -48,20 +52,23 @@ Route::post('/finalizar-compra', [App\Http\Controllers\OrdenController::class, '
 Route::get('provincias/{id}', [App\Http\Controllers\OrdenController::class, 'getProvincias']);
 Route::get('distritos/{id}', [App\Http\Controllers\OrdenController::class, 'getDistritos']);
 
-
+// Route para Home
+Route::get('/gracias-por-tu-compra', function () {
+    return view('ordensend');
+})->name('ordensend');
 
 /* Route para la Disciplina KARATE */
 Route::get('/karate-basico', function () {
     return view('karate/karatebasico');
-})->name('karatebasico');
+})->name('karate-basico');
 
 Route::get('/karate-intermedio', function () {
     return view('karate/karateintermedio');
-})->name('karateintermedio');
+})->name('karate-intermedio');
 
 Route::get('/karate-avanzado', function () {
     return view('karate/karateavanzado');
-})->name('karateavanzado');
+})->name('karate-avanzado');
 
 /* Route para la Disciplina MUAY THAI */
 Route::get('/muaythai-basico', function () {

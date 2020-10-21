@@ -64,12 +64,14 @@ use Illuminate\Support\Facades\DB;
                                 <select id="inputState" name="disciplina" class="form-control form-blackbelt">
                                     <option disabled="disabled" hidden="hidden" selected>Disciplina</option>
                                     <option>Karate</option>
-                                    <option>Kun fu</option>
+                                    <option>Muay Thai</option>
                                     <option>Taekwondo</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group text-center">
+                            <?php $url = $_SERVER["REQUEST_URI"]?>
+                        <input type="hidden" name="url"  value="{{ $url }}">
                             <button type="submit" class="btn btn-primary btn-blackbelt">ENVIAR</button>
                         </div>
                     </form>
@@ -123,13 +125,15 @@ use Illuminate\Support\Facades\DB;
                         <input type="hidden" value="{{$ps->id}}" name="idproducto">
                         <input type="hidden" value="{{$ps->precio}}" name="preciounit">
                         <input type="hidden" value="{{$ps->precio}}" name="totalKarateBasico">
+                        <?php $url = $_SERVER["REQUEST_URI"]?>
+                        <input type="hidden" name="url"  value="{{ $url }}">
                         <button type="submit" class="btn btn-dark">
                             Añadir al carrito | <i class="fas fa-shopping-cart"></i>
                         </button>
                     </div>
                 </div>
                 <div class="col-md-6 packec2">
-                    <span class="precios">{{$ps->precio}}</span>
+                    <span class="precios">S/.{{$ps->precio}}</span>
                 </div>
             </div>
             </form>

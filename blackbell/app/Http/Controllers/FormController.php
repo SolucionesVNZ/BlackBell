@@ -11,21 +11,22 @@ class FormController extends Controller
 
     public function guardar(Request $request)
     {
+        $slug = substr($request->url, 1);
         $request->validate([
             'name' => 'required',
             'lastname' => 'required',
-            'phone' => 'required|unique:contactos,telefono',
-            'email' => 'required|email:rfc,dns|unique:contactos,email',
+            'phone' => 'required:contactos,telefono',
+            'email' => 'required:rfc,dns:contactos,email',
             'membresia' => 'required',
             'disciplina' => 'required',
         ],[
             'name.required' => 'El nombre es requerido',
             'lastname.required' => 'El apellido es requerido',
             'phone.required' => 'El telefono es requerido ',
-            'phone.unique' => 'Ya te has registrado anteriormente con este numero de telefono',
+            //'phone.unique' => 'Ya te has registrado anteriormente con este numero de telefono',
             'email.required' => 'El correo electrnico es obligatorio',
             'email.email' => 'El correo electronico ingresado no es correcto',
-            'email.unique' => 'Ya te has registrado anteriormente con este correo',
+            //'email.unique' => 'Ya te has registrado anteriormente con este correo',
             'membresia.required'  => 'Debe seleccionar una membresia',
             'disciplina.required'  => 'Debe seleccionar una disciplina',
         ]);
@@ -38,9 +39,9 @@ class FormController extends Controller
             $model->membresia = $request->membresia;
             $model->disciplina = $request->disciplina;
             $model->save();
-            return redirect()->route('home')->with('success','Se ha registrado satisfactoriamente, en las proximas 24 horas nos estaremos comunicando con usted.');
+            return redirect()->route($slug)->with('success','Se ha registrado satisfactoriamente, en las proximas 24 horas nos estaremos comunicando con usted.');
         }catch (QueryException $e) {
-            return redirect()->route('home');
+            return redirect()->route($slug);
         }
     }
 }

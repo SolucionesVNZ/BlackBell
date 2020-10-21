@@ -58,9 +58,9 @@
         </div>
         <div class="col-md-8 order-md-1">
             @guest
-                <p class="text-right" style="padding: 30px 30px 0px 30px">¿Ya tienes cuenta? <a href="#"  style="color: #D51C24;">Iniciar Sesión</a></p>
+                <p class="text-right" style="padding: 30px 30px 0px 30px">¿Ya tienes cuenta? <a href="{{route('login')}}"  style="color: #D51C24;">Iniciar Sesión</a></p>
             @else
-                <p class="text-right" style="padding: 30px 30px 0px 30px">Hola {{ Auth::user()->name }} {{ Auth::user()->lastname }}</p>
+                <p class="text-right" style="padding: 30px 30px 0px 30px">Hola {{ Auth::user()->name }} {{ Auth::user()->lastname }}.  <a href="{{route('logout')}}"  style="color: #D51C24;">Cerrar Sesiòn.</a></p>
 
             @endguest
             <h4 class="mb-3">Informacion de contacto</h4>
@@ -69,14 +69,14 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="firstName">Nombres</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="" value="" autocomplete="on" required>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="" value="@isset(Auth::user()->id) {{Auth::user()->name}} @endisset" autocomplete="on" @isset(Auth::user()->id)  readonly @endisset required>
                         <div class="invalid-feedback">
                             Se requiere un nombre válido.
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="lastName">Apellidos</label>
-                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="" value="" autocomplete="on" required>
+                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="" value="@isset(Auth::user()->id) {{Auth::user()->lastname}} @endisset" autocomplete="on" @isset(Auth::user()->name)  readonly @endisset required>
                         <div class="invalid-feedback">
                             Se requiere un apellido válido.
                         </div>
@@ -87,22 +87,22 @@
                         <label for="email">Documento de identidad</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tipo</button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">DNI</a>
-                                    <a class="dropdown-item" href="#">Carnet de extrangeria</a>
-                                    <a class="dropdown-item" href="#">Pasaporte</a>
-                                </div>
+                                <select class="form-control custom-select" name="typecard" required>
+                                    <option disabled="disabled" hidden="hidden">Tipo</option>
+                                    <option value="1">DNI</option>
+                                    <option value="2">C.E.</option>
+                                    <option value="3">Pasaporte</option>
+                                 </select>
                             </div>
                             <input type="text" class="form-control" name="idcard" required>
                             <div class="invalid-feedback">
-                                Se requiere un documento de identidad válido.
+                                Se requiere un tipo de documento y un documento de identidad válido.
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="firstName">Teléfono</label>
-                        <input type="text" class="form-control" id="phone" name="phone" placeholder="" value="" autocomplete="on" required>
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="" value="@isset(Auth::user()->id) {{Auth::user()->phone}} @endisset" autocomplete="on" @isset(Auth::user()->name)  readonly @endisset required>
                         <div class="invalid-feedback">
                             Se requiere un telefono válido.
                         </div>
@@ -111,7 +111,7 @@
 
                 <div class="mb-3">
                     <label for="email">Correo electronico </label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="usuario@ejemplo.com" autocomplete="on" required>
+                    <input type="email" class="form-control" id="email" name="email" value="@isset(Auth::user()->id) {{Auth::user()->email}} @endisset" placeholder="usuario@ejemplo.com" autocomplete="on" @isset(Auth::user()->name)  readonly @endisset required>
                     <div class="invalid-feedback">
                         Ingrese una dirección de correo electrónico válida para recibir información de su compra.
                     </div>

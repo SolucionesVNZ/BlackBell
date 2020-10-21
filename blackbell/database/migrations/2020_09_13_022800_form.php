@@ -17,8 +17,9 @@ class Form extends Migration
             $table->id();
             $table->string('nombre', 200);
             $table->string('apellido', 200);
-            $table->string('telefono', 13)->unique();
-            $table->string('email')->unique();
+            $table->string('telefono', 13);
+            $table->string('email',255);
+            //$table->string('email')->unique();
             $table->string('membresia', 100);
             $table->string('disciplina', 100);
             $table->timestamps();
