@@ -10816,7 +10816,7 @@ a.text-dark:focus {
 }
 .menu-footer li{
     color: #fff;
-    font-size: 2em;
+    font-size: 1.5em !important;
     list-style: none;
 }
 .menu-datos li{

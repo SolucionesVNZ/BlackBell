@@ -49,7 +49,7 @@
                                        placeholder="Teléfono">
                             </div>
                             <div class="form-row">
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-12">
                                     <select id="inputState" name="membresia" class="form-control form-blackbelt">
                                         <option disabled="disabled" hidden="hidden" selected>Membresia</option>
                                         <option>Mensual</option>
@@ -57,17 +57,11 @@
                                         <option>Semestral</option>
                                     </select>
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <select id="inputState" name="disciplina" class="form-control form-blackbelt">
-                                        <option disabled="disabled" hidden="hidden" selected>Disciplina</option>
-                                        <option>Karate</option>
-                                        <option>Muay Thai</option>
-                                    </select>
-                                </div>
                             </div>
                             <div class="form-group text-center">
                                 <?php $url = $_SERVER["REQUEST_URI"]?>
-                                <input type="hidden" name="url"  value="{{ $url }}">
+                                    <input type="hidden" name="disciplina"  value="Muay Thai Avanzado">
+                                    <input type="hidden" name="url"  value="{{ $url }}">
                                 <button type="submit" class="btn btn-primary btn-blackbelt">ENVIAR</button>
                             </div>
                         </form>
@@ -97,9 +91,8 @@
                 <img src="../../img/muaythai/aquienvadirigido.png" alt="innovacion" class="tusobjetivos limg2"/>
             </div>
             <p class="text-dirigido">Este curso va dirigido a todas las personas que tengan un conocimiento avanzado
-                en el deporte <b>(karate)</b> y quieran continuar aprendiendo nuevas técnicas. Practicando esta
-                disciplina
-                de la mano de profesores expertos en el campo.</p>
+                en el deporte <b>(Muay Thai)</b> y quieran continuar aprendiendo nuevas técnicas. Practicando esta
+                disciplina de la mano de profesores expertos en el campo.</p>
         </div>
     </div>
     <div class="banner-disciplina bdisc">

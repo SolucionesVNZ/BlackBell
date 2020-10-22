@@ -39,7 +39,8 @@ class FormController extends Controller
             $model->membresia = $request->membresia;
             $model->disciplina = $request->disciplina;
             $model->save();
-            return redirect()->route($slug)->with('success','Se ha registrado satisfactoriamente, en las proximas 24 horas nos estaremos comunicando con usted.');
+
+            return redirect()->route(empty($slug)? 'inicio' :$slug)->with('success','Se ha registrado satisfactoriamente, en las proximas 24 horas nos estaremos comunicando con usted.');
         }catch (QueryException $e) {
             return redirect()->route($slug);
         }
