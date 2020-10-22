@@ -19,7 +19,7 @@ class TipoDocumentoSeeder extends Seeder
         ]);
 
         DB::table('tipo_documento')->insert([
-            'descripcion' => 'Carnet de extrangeria'
+            'descripcion' => 'C.E.'
         ]);
 
         DB::table('tipo_documento')->insert([

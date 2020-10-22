@@ -18,7 +18,7 @@ class Orden extends Migration
             $table->unsignedBigInteger('fk_shopping_cart');
             $table->unsignedBigInteger('fk_method_pay');
             $table->unsignedBigInteger('fk_users');
-            $table->double('total', 5,2);
+            $table->double('total', 8,2);
             $table->timestamps();
             $table->foreign('fk_shopping_cart')->references('id')->on('shopping_cart');
             $table->foreign('fk_method_pay')->references('id')->on('method_pay');

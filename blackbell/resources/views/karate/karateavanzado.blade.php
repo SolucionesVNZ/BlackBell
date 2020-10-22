@@ -63,7 +63,6 @@
                                         <option disabled="disabled" hidden="hidden" selected>Disciplina</option>
                                         <option>Karate</option>
                                         <option>Muay Thai</option>
-                                        <option>Taekwondo</option>
                                     </select>
                                 </div>
                             </div>

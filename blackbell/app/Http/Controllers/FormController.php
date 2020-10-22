@@ -15,8 +15,8 @@ class FormController extends Controller
         $request->validate([
             'name' => 'required',
             'lastname' => 'required',
-            'phone' => 'required:contactos,telefono',
-            'email' => 'required:rfc,dns:contactos,email',
+            'phone' => 'required',
+            'email' => 'required|email:rfc,dns',
             'membresia' => 'required',
             'disciplina' => 'required',
         ],[
@@ -24,7 +24,7 @@ class FormController extends Controller
             'lastname.required' => 'El apellido es requerido',
             'phone.required' => 'El telefono es requerido ',
             //'phone.unique' => 'Ya te has registrado anteriormente con este numero de telefono',
-            'email.required' => 'El correo electrnico es obligatorio',
+            'email.required' => 'El correo electronico es obligatorio',
             'email.email' => 'El correo electronico ingresado no es correcto',
             //'email.unique' => 'Ya te has registrado anteriormente con este correo',
             'membresia.required'  => 'Debe seleccionar una membresia',

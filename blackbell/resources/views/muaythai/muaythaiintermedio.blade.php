@@ -19,7 +19,7 @@
             </div>
         </div>
         <script> document.getElementById('id03').style.display='block' </script>
-    @endifedtttttt
+    @endif
     <div class="banner-principal bdisc">
         <div class="container">
             <div class="row">
@@ -62,7 +62,6 @@
                                         <option disabled="disabled" hidden="hidden" selected>Disciplina</option>
                                         <option>Karate</option>
                                         <option>Muay Thai</option>
-                                        <option>Taekwondo</option>
                                     </select>
                                 </div>
                             </div>

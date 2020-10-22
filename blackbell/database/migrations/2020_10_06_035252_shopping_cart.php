@@ -18,7 +18,7 @@ class ShoppingCart extends Migration
             $table->unsignedBigInteger('fk_usuario')->nullable()->default(null);
             $table->unsignedBigInteger('fk_orden')->nullable()->default(null);
 
-            $table->double('subtotal',5,2)->nullable()->default(null);
+            $table->double('subtotal',8,2)->nullable()->default(null);
             $table->timestamps();
             $table->foreign('fk_usuario')->references('id')->on('users');
             //$table->foreign('fk_orden')->references('id')->on('orden');

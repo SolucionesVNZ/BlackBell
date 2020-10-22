@@ -57,6 +57,11 @@ Route::get('/gracias-por-tu-compra', function () {
     return view('ordensend');
 })->name('ordensend');
 
+// Route para Mis compras
+Route::get('/mis-compras', function () {
+    return view('miscompras');
+})->name('miscompras');
+
 /* Route para la Disciplina KARATE */
 Route::get('/karate-basico', function () {
     return view('karate/karatebasico');

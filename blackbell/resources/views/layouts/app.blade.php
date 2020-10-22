@@ -112,6 +112,9 @@ use Illuminate\Support\Facades\DB;
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{route('miscompras')}}">
+                                    Mis compras
+                                </a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -147,7 +150,9 @@ use Illuminate\Support\Facades\DB;
                                     ->select(DB::raw('SUM(product_shopping_cart.cantidad) as cant_prod'))
                                     ->join('shopping_cart', 'product_shopping_cart.fk_shopping_cart', '=', 'shopping_cart.id')
                                     ->join('users', 'shopping_cart.fk_usuario', '=', 'users.id')
-                                    ->where('users.id', '=', Auth::user()->id)
+                                    ->where([
+                                        ['users.id', '=', Auth::user()->id],
+                                        ['shopping_cart.fk_orden','=',null]])
                                     ->first();
                                 ?>
                                        @if($cantidad->cant_prod < 1)
