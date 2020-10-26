@@ -13,7 +13,7 @@
             <h4 class="d-flex justify-content-between align-items-center mb-3">
                 <span class="text-muted">Mi carrito</span>
                 <span class="badge badge-danger badge-pill">
-                    @guest
+                     @guest
                         <?php
                         $cantidad = DB::table('product_shopping_cart')
                             ->select(DB::raw('SUM(product_shopping_cart.cantidad) as cant_prod'))
@@ -21,17 +21,27 @@
                             ->where('shopping_cart.id', '=', session('idShoppingCart'))
                             ->first();
                         ?>
-                        {{$cantidad->cant_prod}}
+                        @if($cantidad->cant_prod < 1)
+                            0
+                        @else
+                            {{ $cantidad->cant_prod }}
+                        @endif
                     @else
                         <?php
                         $cantidad = DB::table('product_shopping_cart')
                             ->select(DB::raw('SUM(product_shopping_cart.cantidad) as cant_prod'))
                             ->join('shopping_cart', 'product_shopping_cart.fk_shopping_cart', '=', 'shopping_cart.id')
                             ->join('users', 'shopping_cart.fk_usuario', '=', 'users.id')
-                            ->where('users.id', '=', Auth::user()->id)
+                            ->where([
+                                ['users.id', '=', Auth::user()->id],
+                                ['shopping_cart.fk_orden', '=', null]])
                             ->first();
                         ?>
-                        {{$cantidad->cant_prod}}
+                        @if($cantidad->cant_prod < 1)
+                            0
+                        @else
+                            {{ $cantidad->cant_prod }}
+                        @endif
                     @endguest
                 </span>
             </h4>
@@ -60,8 +70,17 @@
             @guest
                 <p class="text-right" style="padding: 30px 30px 0px 30px">¿Ya tienes cuenta? <a href="{{route('login')}}"  style="color: #D51C24;">Iniciar Sesión</a></p>
             @else
-                <p class="text-right" style="padding: 30px 30px 0px 30px">Hola {{ Auth::user()->name }} {{ Auth::user()->lastname }}.  <a href="{{route('logout')}}"  style="color: #D51C24;">Cerrar Sesiòn.</a></p>
+                <p class="text-right" style="padding: 30px 30px 0px 30px">Hola {{ Auth::user()->name }} {{ Auth::user()->lastname }}.
+                    <a href="{{ route('logout') }}" style="color: #D51C24;"
+                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                        {{ __('Cerrar sesión') }}
+                    </a>
 
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+                </p>
             @endguest
             <h4 class="mb-3">Informacion de contacto</h4>
             <form class="needs-validation" novalidate method="POST" action="{{route('crearOrden')}}">
@@ -87,14 +106,14 @@
                         <label for="email">Documento de identidad</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <select class="form-control custom-select" name="typecard" required>
+                                <select class="form-control custom-select" name="typecard" @isset(Auth::user()->id)  readonly @endisset required>
                                     <option disabled="disabled" hidden="hidden">Tipo</option>
                                     <option value="1">DNI</option>
                                     <option value="2">C.E.</option>
                                     <option value="3">Pasaporte</option>
                                  </select>
                             </div>
-                            <input type="text" class="form-control" name="idcard" required>
+                            <input type="text" class="form-control" name="idcard" value="@isset(Auth::user()->id) {{Auth::user()->document}} @endisset" @isset(Auth::user()->name)  readonly @endisset required>
                             <div class="invalid-feedback">
                                 Se requiere un tipo de documento y un documento de identidad válido.
                             </div>
@@ -150,6 +169,15 @@
                     </div>
                 </div>
                 <div class="col-md-2"><span id="loader"><i class="fa fa-spinner fa-3x fa-spin"></i></span></div>
+                @guest
+                    <div class="mb-3">
+                        <input type="checkbox" class="form-check-input" id="checkbox" name="checkbox" required>
+                        <label class="form-check-label" for="checkbox"> No tienes cuenta?. ¡REGISTRATE!</label>
+                        <div class="invalid-feedback">
+                            Si no tienes cuenta debes registrarte seleccionando este check.
+                        </div>
+                    </div>
+                @endguest
 
                 <hr class="mb-4">
 

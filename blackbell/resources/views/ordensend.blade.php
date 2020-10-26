@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div style="padding: 30px">
+    <div class="container" style="padding: 30px">
     <div class="card text-center">
         <div class="card-header">
             <h5 class="card-title">¡MUCHAS GRACIAS POR TU COMPRA!</h5>
@@ -37,7 +37,7 @@
                         </tr>
                         <tr>
                             <td colspan="3" class="text-right"><span class="font-weight-bold">Total</span></td>
-                            <td style="font-weight: bold;font-size: 1.2em;">S/.{{ $totalShoppingCart }}</td>
+                           <td style="font-weight: bold;font-size: 1.2em;">S/.{{ $totalShoppingCart }}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="card-footer text-muted">
-            <a href="#" class="btn btn-primary">DESCARGAR ORDEN GENERADA</a>
+            <a href="#" class="btn btn-danger">DESCARGAR ORDEN GENERADA</a>
         </div>
     </div>
     </div>

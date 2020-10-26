@@ -92,6 +92,9 @@ Route::get('/muaythai-avanzado', function () {
 Route::post('karatebasico', [App\Http\Controllers\KaratebasicoController::class, 'agregar'])
     ->name('agregarCarritoKarateBasico');
 
+Route::get('/imprimir-orden', [App\Http\Controllers\OrdenPdfController::class, 'imprimir'])
+    ->name('imprimir-orden');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -66,6 +66,7 @@ class OrdenController
             $countCart = $usuario->shoppgingCarts()->whereNull('fk_orden')->count();
             $shoppingCart = $usuario->shoppgingCarts()->whereNull('fk_orden')->first();
             if($countCart == 1) {
+                $produt_shopping_cart = $shoppingCart->productShoppingCart;
                 $total = $shoppingCart->productShoppingCart()->sum('total');
                 $usuario->fk_tipo_documento = $request->typecard;
                 $usuario->document = $request->idcard;
@@ -85,7 +86,7 @@ class OrdenController
                 $shoppingCart->fk_orden = $orden->id;
                 $shoppingCart->subtotal = $total;
                 $shoppingCart->save();
-                return view('ordensend');
+                return view('ordensend',['produt_shopping_cart' => $produt_shopping_cart, 'totalShoppingCart' => $total]);
             }
         }else {
 
