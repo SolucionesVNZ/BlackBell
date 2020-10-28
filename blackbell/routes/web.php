@@ -62,6 +62,11 @@ Route::get('/mis-compras', function () {
     return view('miscompras');
 })->name('miscompras');
 
+/* Route para el RETO */
+Route::get('/reto', function () {
+    return view('reto');
+})->name('reto');
+
 /* Route para la Disciplina KARATE */
 Route::get('/karate-basico', function () {
     return view('karate/karatebasico');

@@ -212,7 +212,7 @@ use Illuminate\Support\Facades\DB;
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <h2 style="color: #fff;">CLASES DE ARTES MARCIALES</h2>
+                    <h2 class="footer-text" style="color: #fff;">CLASES DE ARTES MARCIALES</h2>
                     <div class="row">
                 <div class="col-md-6">
                     <ul class="menu-footer">

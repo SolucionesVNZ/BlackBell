@@ -63,7 +63,7 @@
     <div class="container">
         <img src="../../img/portada/banner/tusobjetivos.png" alt="innovacion" class="tusobjetivos"/>
         <ul class="flex-container">
-            <li class="flex-item">
+            <li class="flex-item objetivosimg">
                 <img src="../../img/defensa-personal.jpg" alt="innovacion"/>
                 <div class="disciplinas">
                 <h4 class="title-disciplina">Defensa Personal</h4>
@@ -71,7 +71,7 @@
                 <p>Desarrolla técnicas de defensa personal y ten los medios para defenderte o impedir ataques.</p>
                 </div>
             </li>
-            <li class="flex-item">
+            <li class="flex-item objetivosimg">
                 <img src="../../img/portada/disciplina/artes-marciales.jpg" alt="emprendimiento"/>
                 <div class="disciplinas">
                 <h4 class="title-disciplina">Artes Marciales</h4>
@@ -79,7 +79,7 @@
                     <p>Maximiza tu técnica junto con los mejores instructores de Karate y Muay Thai.</p>
                 </div>
             </li>
-            <li class="flex-item">
+            <li class="flex-item objetivosimg">
                 <img src="../../img/portada/disciplina/mantente-en-forma.jpg" alt="corporacion"/>
                 <div class="disciplinas">
                 <h4 class="title-disciplina">Mantente en forma</h4>

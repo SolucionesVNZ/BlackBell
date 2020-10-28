@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="card-footer text-muted">
-            <a href="#" class="btn btn-danger">DESCARGAR ORDEN GENERADA</a>
+            <a href="{{route('imprimir-orden')}}" class="btn btn-danger">DESCARGAR ORDEN GENERADA</a>
         </div>
     </div>
     </div>
