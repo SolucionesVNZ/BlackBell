@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fce9fdd-e183-4552-9294-7c2c88724ac2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/img/reto/actualmente.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/reto/fight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/reto/fondo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/reto/obtentuentrada.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/reto/precios.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/reto/precios.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/reto/tuentrada.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_153851_reto.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_153851_reto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reto.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="9fce9fdd-e183-4552-9294-7c2c88724ac2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/reto.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="42" column="63" lean-forward="true" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
+            <state relative-caret-position="309">
+              <caret line="83" column="81" selection-start-line="83" selection-start-column="81" selection-end-line="83" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -297,8 +285,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-1692" />
+    <option name="y" value="-109" />
+    <option name="width" value="1380" />
+    <option name="height" value="738" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -425,12 +415,12 @@
       <workItem from="1603399747235" duration="57376000" />
       <workItem from="1603862220976" duration="748000" />
       <workItem from="1603895684133" duration="12651000" />
-      <workItem from="1603997130151" duration="7404000" />
+      <workItem from="1603997130151" duration="8098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="304194000" />
+    <option name="totallyTimeSpent" value="304888000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -442,7 +432,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23676248" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -459,7 +450,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.31535947" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49924356" visible="true" weight="0.95098037" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49924356" weight="0.95098037" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -788,8 +779,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/reto.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="42" column="63" lean-forward="true" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
+        <state relative-caret-position="309">
+          <caret line="83" column="81" selection-start-line="83" selection-start-column="81" selection-end-line="83" selection-end-column="81" />
         </state>
       </provider>
     </entry>

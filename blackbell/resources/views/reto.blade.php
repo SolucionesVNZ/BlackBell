@@ -33,9 +33,9 @@
                             <select id="inputState" name="entrada" class="form-control form-blackbelt">
                                 <option disabled="disabled" hidden="hidden" selected>Tipo de entrada</option>
                                 <option>Gratuita</option>
-                                <option>VIP 50</option>
-                                <option>PREMIUM 100</option>
-                                <option>BLACK 139</option>
+                                <option>VIP 60</option>
+                                <option>PREMIUM 1029</option>
+                                <option>BLACK 249</option>
                             </select>
                         </div>
                             <div class="form-group col-md-4">
@@ -80,8 +80,8 @@
             <div class="col-md-6">
                 <div class="espaciado-force">
                     <h2 class="evento-title evento-force">Únete al <br>BLACK BELT FORCE</h2>
-                    <p class="text-evento text-force">Una comunidad que pelea día a día para llegar a sus resultados
-                        dando el 200% en todo lo que se propone.! <b>Disciplina, Motivación
+                    <p class="text-evento text-force">¡Una comunidad que pelea día a día para llegar a sus resultados
+                        dando el 200% en todo lo que se propone! <b>Disciplina, Motivación
                         y Resultados</b> es lo que nos une en este
                         camino de llegar a donde queremos estar.
                     </p>
