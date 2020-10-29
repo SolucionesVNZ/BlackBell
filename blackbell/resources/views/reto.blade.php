@@ -34,7 +34,7 @@
                                 <option disabled="disabled" hidden="hidden" selected>Tipo de entrada</option>
                                 <option>Gratuita</option>
                                 <option>VIP 60</option>
-                                <option>PREMIUM 1029</option>
+                                <option>PREMIUM 129</option>
                                 <option>BLACK 249</option>
                             </select>
                         </div>
