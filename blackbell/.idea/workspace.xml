@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fce9fdd-e183-4552-9294-7c2c88724ac2" name="Default Changelist" comment="" />
+    <list default="true" id="9fce9fdd-e183-4552-9294-7c2c88724ac2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/img/reto/actualmente.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/reto/fight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/reto/fondo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/reto/obtentuentrada.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/reto/precios.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/reto/precios.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/reto/tuentrada.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_153851_reto.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_153851_reto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/reto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reto.blade.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,35 +31,56 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-122">
-              <caret line="108" column="26" lean-forward="true" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
+            <state relative-caret-position="192">
+              <caret line="108" column="26" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/ordensend.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/reto.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="72" column="18" lean-forward="true" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
+            <state relative-caret-position="326">
+              <caret line="42" column="63" lean-forward="true" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/karate/karatebasico.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Models/Disciplina.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="150" selection-start-line="150" selection-end-line="150" />
+            <state relative-caret-position="102">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/karate/karateintermedio.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Models/Form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
+            <state relative-caret-position="136">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="11" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="10836" column="1" lean-forward="true" selection-start-line="10836" selection-start-column="1" selection-end-line="10836" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="70" column="13" lean-forward="true" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,13 +158,9 @@
         <option value="$PROJECT_DIR$/public/css/w3.css" />
         <option value="$PROJECT_DIR$/resources/views/ordenpdf.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/OrdenPdfController.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_10_28_153851_reto.php" />
         <option value="$PROJECT_DIR$/app/Models/Reto.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/FormController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/main.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/app.css" />
-        <option value="$PROJECT_DIR$/resources/views/reto.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/orden.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/cart.blade.php" />
@@ -143,6 +172,10 @@
         <option value="$PROJECT_DIR$/resources/views/muaythai/muaythaiintermedio.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/karate/karateavanzado.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/ordensend.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/FormController.php" />
+        <option value="$PROJECT_DIR$/resources/views/reto.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/app.css" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_10_28_153851_reto.php" />
       </list>
     </option>
   </component>
@@ -264,10 +297,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1608" />
-    <option name="y" value="-140" />
-    <option name="width" value="1616" />
-    <option name="height" value="916" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -292,39 +323,23 @@
               <item name="blackbell" type="b2602c69:ProjectViewProjectNode" />
               <item name="blackbell" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blackbell" type="b2602c69:ProjectViewProjectNode" />
               <item name="blackbell" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blackbell" type="b2602c69:ProjectViewProjectNode" />
               <item name="blackbell" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blackbell" type="b2602c69:ProjectViewProjectNode" />
               <item name="blackbell" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blackbell" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blackbell" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="karate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blackbell" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blackbell" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blackbell" type="b2602c69:ProjectViewProjectNode" />
@@ -354,19 +369,19 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\sis_land\Laravel\blackbell\public\img\reto" />
-      <recent name="C:\xampp\htdocs\sis_land\Laravel\blackbell\public\img" />
-      <recent name="C:\xampp\htdocs\sis_land\Laravel\blackbell\public\img\cuentas" />
-      <recent name="C:\xampp\htdocs\sis_land\Laravel\blackbell\resources\views\muaythai" />
-      <recent name="C:\xampp\htdocs\sis_land\Laravel\blackbell\public\img\portada\banner" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\sis_land\Laravel\blackbell\public\img\reto" />
       <recent name="C:\xampp\htdocs\sis_land\Laravel\blackbell\public" />
       <recent name="C:\xampp\htdocs\sis_land\Laravel\blackbell\public\img" />
       <recent name="C:\xampp\htdocs\sis_land\Laravel\blackbell\public\img\portada\banner" />
       <recent name="C:\xampp\htdocs\sis_land\Laravel\blackbell\public\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sis_land\Laravel\blackbell\public\img\reto" />
+      <recent name="C:\xampp\htdocs\sis_land\Laravel\blackbell\public\img" />
+      <recent name="C:\xampp\htdocs\sis_land\Laravel\blackbell\public\img\cuentas" />
+      <recent name="C:\xampp\htdocs\sis_land\Laravel\blackbell\resources\views\muaythai" />
+      <recent name="C:\xampp\htdocs\sis_land\Laravel\blackbell\public\img\portada\banner" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -409,12 +424,13 @@
       <workItem from="1603376111798" duration="3975000" />
       <workItem from="1603399747235" duration="57376000" />
       <workItem from="1603862220976" duration="748000" />
-      <workItem from="1603895684133" duration="12036000" />
+      <workItem from="1603895684133" duration="12651000" />
+      <workItem from="1603997130151" duration="7404000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="296175000" />
+    <option name="totallyTimeSpent" value="304194000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -426,10 +442,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1608" y="-140" width="1616" height="916" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19858612" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23676248" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -444,7 +459,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.31535947" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49924356" weight="0.9617347" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49924356" visible="true" weight="0.95098037" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -479,9 +494,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/img/3488805.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/img/defensa-personal.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -621,13 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_10_28_153851_reto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrdenPdfController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -635,20 +640,6 @@
           <folding>
             <element signature="e#39#67#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Reto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
@@ -674,32 +665,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="11117" column="22" lean-forward="true" selection-start-line="11117" selection-start-column="22" selection-end-line="11117" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="62" column="25" lean-forward="true" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/img/portada/banner/fondo-conoce-mas-disciplinas.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/reto.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/muaythai/muaythaiavanzado.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -746,13 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-122">
-          <caret line="108" column="26" lean-forward="true" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/karate/karatebasico.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -769,8 +729,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ordensend.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="72" column="18" lean-forward="true" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
+        <state relative-caret-position="1037">
+          <caret line="61" column="34" lean-forward="true" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="108" column="26" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Disciplina.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="11" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Reto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_10_28_153851_reto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="10836" column="1" lean-forward="true" selection-start-line="10836" selection-start-column="1" selection-end-line="10836" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="70" column="13" lean-forward="true" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/reto.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="42" column="63" lean-forward="true" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
         </state>
       </provider>
     </entry>

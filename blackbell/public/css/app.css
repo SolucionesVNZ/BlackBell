@@ -10840,15 +10840,23 @@ a.text-dark:focus {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
 }
 /********** BANNER RETO ************/
 .banner-reto{
-    background-image: url('../img/reto/portada2.jpg');
+    background-image: url('../img/reto/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+.obtentuentrada{
+    background-image: url('../img/reto/tuentrada.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding-top: 50px;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
 }
 
 .banner-reto .form-a{
@@ -11027,6 +11035,10 @@ img.time-img {
     width: 100%;
     padding: 20px;
 }
+img.obten-img {
+    padding: 150px 60px;
+    width: 100%;
+}
 .text-force-d{
     color:#616161;
     padding: 20px 20px 0px 20px;
@@ -11196,18 +11208,38 @@ img.time-img {
 
 @media only screen and (max-width: 1025px) {
     /* For mobile phones: */
-    .principal {
-        /* margin-left: 10%; */
-        margin: 0 10%;
+    img.obten-img {
+        padding: 30px 20px;
         width: 100%;
     }
 
-    .banner-reto{
-        background-image: url('../img/reto/fondo-resp.png');
+    .banner-reto {
+        background-image: url(../img/reto/fondo.jpg);
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: cover;
+        background-attachment: fixed;
         padding-top: 50px;
         padding-bottom: 150px;
+    }
+    .obtentuentrada {
+        background-image: url(../img/reto/tuentrada.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .principal {
+        /* margin-left: 10%; */
+        margin: 0;
+        width: 100%;
+        padding: 30px;
+    }
+
+    .espaciado-force {
+        padding-top: 60px;
+        padding-bottom: 70px;
+        padding-left: 60px;
     }
 
     .banner-reto .form-c {
@@ -11249,7 +11281,6 @@ img.time-img {
     .espaciado {
         padding:40px;
     }
-
     .container-karate{
         width: 300px;
         height: 80px;

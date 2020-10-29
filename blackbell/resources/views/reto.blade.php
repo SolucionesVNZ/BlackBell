@@ -3,7 +3,7 @@
     <div class="banner-reto">
         <div class="row">
             <div class="col-md-6">
-                <img class="principal" src="../../img/reto/principal.png" alt="innovacion"/>
+                <img class="principal" src="../../img/reto/fight.png" alt="innovacion"/>
             </div>
             <div class="col-md-6">
                 <div class="form-c">
@@ -29,7 +29,7 @@
                                    placeholder="Teléfono">
                         </div>
                         <div class="form-row">
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-8">
                             <select id="inputState" name="entrada" class="form-control form-blackbelt">
                                 <option disabled="disabled" hidden="hidden" selected>Tipo de entrada</option>
                                 <option>Gratuita</option>
@@ -38,11 +38,11 @@
                                 <option>BLACK 139</option>
                             </select>
                         </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-4">
                                 <select id="inputState" name="horario" class="form-control form-blackbelt">
                                     <option disabled="disabled" hidden="hidden" selected>Horario</option>
-                                    <option>AM</option>
-                                    <option>PM</option>
+                                    <option>7:00 AM</option>
+                                    <option>7:00 PM</option>
                                 </select>
                             </div>
                         </div>
@@ -132,7 +132,7 @@
                 <div class="disciplinas">
                     <h4 class="title-disciplina title-force num-force">45</h4>
                     <hr class="separator-force">
-                    <p class="force-cc">MINUTOS AL DIA</p>
+                    <p class="force-cc">MINUTOS AL DÍA</p>
                 </div>
             </li>
             <li class="flex-item t-force">
@@ -172,11 +172,23 @@
             </li>
         </ul>
     </div>
+    <div class="obtentuentrada">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="../../img/reto/obtentuentrada.png" alt="" class="obten-img"/>
+            </div>
+            <div class="col-md-6">
+                <img src="../../img/reto/actualmente.png" alt="" class="obten-img"/>
+            </div>
+        </div>
+    </div>
+    </div>
     <div style="background: #F6F6F6; ">
     <div class="container" style="padding-top: 20px;">
         <hr class="red-force">
         <h2 class="evento-title evento-force time-force">PRECIOS</h2>
-        <img src="../../img/reto/tabla.png" alt="emprendimiento" class="time-img"/>
+        <img src="../../img/reto/precios.png" alt="precios" class="time-img"/>
     </div>
     </div>
 @endsection
