@@ -21,6 +21,8 @@ class Reto extends Migration
             $table->string('email',255);
             //$table->string('email')->unique();
             $table->string('entrada', 100);
+            $table->string('horario', 2);
+
             $table->timestamps();
         });
     }

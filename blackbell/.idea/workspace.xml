@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fce9fdd-e183-4552-9294-7c2c88724ac2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FormController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrdenPdfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrdenPdfController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/karate/karateavanzado.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/karate/karateavanzado.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/karate/karatebasico.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/karate/karatebasico.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/karate/karateintermedio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/karate/karateintermedio.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/muaythai/muaythaiavanzado.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/muaythai/muaythaiavanzado.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/muaythai/muaythaibasico.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/muaythai/muaythaibasico.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/muaythai/muaythaiintermedio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/muaythai/muaythaiintermedio.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/orden.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/orden.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ordenpdf.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ordenpdf.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ordensend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ordensend.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reto.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="9fce9fdd-e183-4552-9294-7c2c88724ac2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/ordensend.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2">
-              <caret line="59" column="63" lean-forward="true" selection-start-line="59" selection-start-column="63" selection-end-line="59" selection-end-column="63" />
+            <state relative-caret-position="498">
+              <caret line="72" column="18" lean-forward="true" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -429,12 +409,12 @@
       <workItem from="1603376111798" duration="3975000" />
       <workItem from="1603399747235" duration="57376000" />
       <workItem from="1603862220976" duration="748000" />
-      <workItem from="1603895684133" duration="11608000" />
+      <workItem from="1603895684133" duration="12036000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295747000" />
+    <option name="totallyTimeSpent" value="296175000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -446,7 +426,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1608" y="-140" width="1616" height="916" extended-state="6" />
+    <frame x="-1608" y="-140" width="1616" height="916" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19858612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -463,7 +444,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.31535947" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49924356" visible="true" weight="0.9617347" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49924356" weight="0.9617347" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -788,8 +769,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ordensend.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="59" column="63" lean-forward="true" selection-start-line="59" selection-start-column="63" selection-end-line="59" selection-end-column="63" />
+        <state relative-caret-position="498">
+          <caret line="72" column="18" lean-forward="true" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
         </state>
       </provider>
     </entry>

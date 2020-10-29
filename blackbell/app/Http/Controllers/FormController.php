@@ -55,6 +55,7 @@ class FormController extends Controller
             'phone' => 'required',
             'email' => 'required|email:rfc,dns',
             'entrada' => 'required',
+            'horario' => 'required',
         ],[
             'name.required' => 'El nombre es requerido',
             'lastname.required' => 'El apellido es requerido',
@@ -64,6 +65,8 @@ class FormController extends Controller
             'email.email' => 'El correo electronico ingresado no es correcto',
             //'email.unique' => 'Ya te has registrado anteriormente con este correo',
             'entrada.required'  => 'Debe seleccionar una entrada',
+            'horario.required'  => 'Debe seleccionar un horario',
+
         ]);
         try {
             $model = new Reto;
@@ -72,6 +75,7 @@ class FormController extends Controller
             $model->telefono = $request->phone;
             $model->email = $request->email;
             $model->entrada = $request->entrada;
+            $model->horario = $request->horario;
             $model->save();
 
             return redirect()->route(empty($slug)? 'inicio' :$slug)->with('success','Se ha registrado satisfactoriamente, en las proximas 24 horas nos estaremos comunicando con usted.');
