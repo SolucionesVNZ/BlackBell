@@ -7,10 +7,9 @@
             </div>
             <div class="col-md-6">
                 <div class="form-c">
-                    <form method="POST" action="{{route('guardarFormulario')}}">
+                    <form method="POST" action="{{route('guardarReto')}}">
                         @csrf
-                        <h1 class="title-form">PONTE EN CONTACTO</h1>
-                        <p class="sub-title">(Nuestros asesores estarán felices de atenderte)</p>
+                        <h1 class="title-form">Empieza el RETO AHORA</h1>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <input type="text" name="name" class="form-control form-blackbelt" id="inputAddress"
@@ -29,16 +28,28 @@
                             <input type="text" name="phone" class="form-control form-blackbelt" id="inputAddress"
                                    placeholder="Teléfono">
                         </div>
-                        <div class="form-group">
-                            <select id="inputState" name="membresia" class="form-control form-blackbelt">
+                        <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <select id="inputState" name="entrada" class="form-control form-blackbelt">
                                 <option disabled="disabled" hidden="hidden" selected>Tipo de entrada</option>
-                                <option>Opción 1</option>
-                                <option>Opción 2</option>
-                                <option>Opción 3</option>
+                                <option>Gratuita</option>
+                                <option>VIP 50</option>
+                                <option>PREMIUM 100</option>
+                                <option>BLACK 139</option>
                             </select>
                         </div>
+                            <div class="form-group col-md-6">
+                                <select id="inputState" name="horario" class="form-control form-blackbelt">
+                                    <option disabled="disabled" hidden="hidden" selected>Horario</option>
+                                    <option>AM</option>
+                                    <option>PM</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="form-group text-center">
-                            <button type="submit" class="btn btn-primary btn-blackbelt">ENVIAR</button>
+                            <?php $url = $_SERVER["REQUEST_URI"]?>
+                                <input type="hidden" name="url"  value="{{ $url }}">
+                            <button type="submit" class="btn btn-primary btn-blackbelt">REGISTRARME</button>
                         </div>
                     </form>
                     @if ($errors->any())
@@ -69,13 +80,11 @@
             <div class="col-md-6">
                 <div class="espaciado-force">
                     <h2 class="evento-title evento-force">Únete al <br>BLACK BELT FORCE</h2>
-                    <p class="text-evento text-force">Una comunidad que pelea día a día para
-                        llegar a tus resultados da su 200% en todo
-                        lo que se propone! Disciplina, Motivación
-                        y Resultados es lo que nos une en este
+                    <p class="text-evento text-force">Una comunidad que pelea día a día para llegar a sus resultados
+                        dando el 200% en todo lo que se propone.! <b>Disciplina, Motivación
+                        y Resultados</b> es lo que nos une en este
                         camino de llegar a donde queremos estar.
                     </p>
-                    <p class="link-force">Conoce más aquí</p>
                     <div class="separador-force"></div>
                 </div>
             </div>
@@ -109,7 +118,7 @@
             </li>
         </ul>
     </div>
-    <div class="banner-disciplina">
+    <div class="banner-force">
         <div class="container">
         <ul class="flex-container">
             <li class="flex-item t-force">

@@ -23,7 +23,7 @@
                         @isset($produt_shopping_cart)
                             @foreach($produt_shopping_cart as $psc)
                                 <tr>
-                                    <td> {{ $psc->product->disciplina->descripcion }} {{ $psc->product->nivel->descripcion }} - Membresia: {{ $psc->product->membresia->descripcion }}</td>
+                                    <td> {{ $psc->product->disciplina->descripcion }} {{ $psc->product->nivel->descripcion }} - Membresía: {{ $psc->product->membresia->descripcion }}</td>
                                     <td>S/.{{ $psc->precio_unit }}</td>
                                     <td>{{ $psc->cantidad }}</td>
                                     <td>S/.<span id="total1">{{ $psc->total }}</span></td>
@@ -49,7 +49,7 @@
                         Verificando el pago
                     </div>
                     <p><b>Si ya realizaste el pago</b>, no te olvides de enviarnos el Voucher al correo electronico:
-                        <a style="color: #E3342F;" href="mailto:info@latamcoachingnetwork.com">info@latamcoachingnetwork.com</a>
+                        <a style="color: #E3342F;" href="mailto:hola@dojoblackbelt.com">hola@dojoblackbelt.com</a>
                     </p>
                     <p><b>Si aun no haz realizado el pago de la orden</b>, estos son los bancos donde recepcionamos:</p>
                     <div class="card-group">

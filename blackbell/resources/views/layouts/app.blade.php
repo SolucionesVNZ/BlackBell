@@ -206,31 +206,32 @@ use Illuminate\Support\Facades\DB;
                 <div class="offset-md-1 col-md-4">
                     <img src="{{asset('/img/Black-belt-negro.png')}}" alt="profile Pic" class="logo">
                     <ul class="menu-datos">
-                        <li><i class="fas fa-phone-volume"></i> +(51)991 892 397</li>
+                        <li><i class="fas fa-phone-volume"></i> +(51)991 892 522</li>
                         <li><i class="fas fa-map-marker"></i> Calle Teruel 370 Miraflores, Lima, Peru</li>
-                        <li><i class="fas fa-envelope"></i> info@latamcoachingnetwork.com</li>
+                        <li><i class="fas fa-envelope"></i> hola@dojoblackbelt.com</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
                     <h2 class="footer-text" style="color: #fff;">CLASES DE ARTES MARCIALES</h2>
                     <div class="row">
-                <div class="col-md-6">
-                    <ul class="menu-footer">
-                        <li><a href="{{route('karate-basico')}}">Karate Básico</a></li>
-                        <li><a href="{{route('karate-intermedio')}}">Karate Intermedio</a></li>
-                        <li><a href="{{route('karate-avanzado')}}">Karate Avanzado</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <ul class="menu-footer">
-                        <li><a href="{{route('muaythai-basico')}}">Muay Thai Básico</a></li>
-                        <li><a href="{{route('muaythai-intermedio')}}">Muay Thai Intermedio</a></li>
-                        <li><a href="{{route('muaythai-avanzado')}}">Muay Thai Avanzado</a></li>
-                    </ul>
-                </div>
+                        <div class="col-md-6">
+                            <ul class="menu-footer">
+                                <li><a href="{{route('karate-basico')}}">Karate Básico</a></li>
+                                <li><a href="{{route('karate-intermedio')}}">Karate Intermedio</a></li>
+                                <li><a href="{{route('karate-avanzado')}}">Karate Avanzado</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="menu-footer">
+                                <li><a href="{{route('muaythai-basico')}}">Muay Thai Básico</a></li>
+                                <li><a href="{{route('muaythai-intermedio')}}">Muay Thai Intermedio</a></li>
+                                <li><a href="{{route('muaythai-avanzado')}}">Muay Thai Avanzado</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
     </footer>
 </div>
 </body>

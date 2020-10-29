@@ -50,7 +50,7 @@
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
                             <h6 class="my-0">{{$psc->product->disciplina->descripcion}}</h6>
-                            <small class="text-muted">Membresia: {{$psc->product->membresia->descripcion}}</small>
+                            <small class="text-muted">Membresía: {{$psc->product->membresia->descripcion}}</small>
                         </div>
                         <span class="text-muted">{{$psc->cantidad}} x {{$psc->precio_unit}}
                         <br>

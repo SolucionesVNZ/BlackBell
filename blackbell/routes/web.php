@@ -30,6 +30,9 @@ Route::get('/campus', function () {
 Route::post('contacts', [App\Http\Controllers\FormController::class, 'guardar'])
     ->name('guardarFormulario');
 
+Route::post('contactsreto', [App\Http\Controllers\FormController::class, 'guardarReto'])
+    ->name('guardarReto');
+
 // Route para Cart
 Route::get('/cart', [App\Http\Controllers\CartController::class, 'mostrarCarrito'])
     ->name('cart');

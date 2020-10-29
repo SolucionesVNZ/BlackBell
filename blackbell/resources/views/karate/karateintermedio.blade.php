@@ -51,7 +51,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <select id="inputState" name="membresia" class="form-control form-blackbelt">
-                                        <option disabled="disabled" hidden="hidden" selected>Membresia</option>
+                                        <option disabled="disabled" hidden="hidden" selected>Membresía</option>
                                         <option>Mensual</option>
                                         <option>Trimestral</option>
                                         <option>Semestral</option>
@@ -146,7 +146,6 @@
                     Presidente de la Asociación Peruana de Karate Do Tradicional, seleccionado Nacional de Karate Tradicional con 30 años de experiencia.
                     Bicampeón Panamericano Kumite por Equipos ITKF 2007 y WTKF 2019 Instructor y Director del Dojo APKT.<br>
                     <br>
-                    <b>Conoce el temario:</b> <a class="btn btn-dark">Aquí</a>
                 </div>
             </div>
         </div>

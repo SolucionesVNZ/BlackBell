@@ -11107,11 +11107,17 @@ img.time-img {
     font-size: 2.8em;
 }
 .banner-disciplina{
-     background: #D51C24;
+     background-image: url('../img/portada/banner/fondo-conoce-mas-disciplinas.jpg');
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
      padding-top: 50px;
      padding-bottom: 50px;
  }
-
+.banner-force{
+    background: #D51C24;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 .bdisc{
     background-image: none !important;
 }

@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Orden Generada</title>
     <style>
         h1{
             text-align: center;
@@ -10,9 +10,12 @@
         }
         .contenido{
             font-size: 20px;
+            background: #DB3333;
+            color: #fff;
         }
         #primero{
-            background-color: #ccc;
+            color: #DB3333;
+            font-weight: 600;
         }
         #segundo{
             color:#44a359;
@@ -23,12 +26,38 @@
     </style>
 </head>
 <body>
-<h1>Titulo de prueba</h1>
+<h1>BLACKBELT</h1>
 <hr>
 <div class="contenido">
-    <p id="primero">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nihil illo odit aperiam alias rem voluptatem odio maiores doloribus facere recusandae suscipit animi quod voluptatibus, laudantium obcaecati quisquam minus modi.</p>
-    <p id="segundo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nihil illo odit aperiam alias rem voluptatem odio maiores doloribus facere recusandae suscipit animi quod voluptatibus, laudantium obcaecati quisquam minus modi.</p>
-    <p id="tercero">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore nihil illo odit aperiam alias rem voluptatem odio maiores doloribus facere recusandae suscipit animi quod voluptatibus, laudantium obcaecati quisquam minus modi.</p>
+    <div id="titulo">
+        Gracias por comprar con nosotros
+    </div>
+    <p id="primero"> [Order #11499] (7 Octubre, 2020)</p>
+    <table>
+        <thead>
+        <th>
+            <td>Disciplina</td>
+            <td>Cantidad</td>
+            <td>Precio</td>
+        </th>
+        </thead>
+        <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">Subtotal:</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">Total:</td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+    <p>Gracias por comprar con nosotros.</p>
 </div>
 </body>
 </html>
