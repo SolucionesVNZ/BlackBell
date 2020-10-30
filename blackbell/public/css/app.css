@@ -11179,7 +11179,13 @@ img.obten-img {
     margin-top: 50px !important;
     margin-bottom: 50px !important;
 }
-
+.evento-responsive {
+    width: 100%;
+    display: none;
+}
+.evento {
+    width: 100%;
+}
 .card-header{
     text-align: center;
     font-weight: bold;
@@ -11213,6 +11219,17 @@ img.obten-img {
         width: 100%;
     }
 
+    .flex-item-d {
+        width: auto;
+    }
+    .evento {
+        width: 100%;
+        display: none;
+    }
+    .evento-responsive {
+        width: 100%;
+        display: block;
+    }
     .banner-reto {
         background-image: url(../img/reto/fondo.jpg);
         background-repeat: no-repeat;
