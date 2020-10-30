@@ -10981,6 +10981,7 @@ a.text-dark:focus {
 .flex-item-d img{
     width: 100%;
 }
+
 .flex-item-d .disciplinas {
     border-style: solid;
     border-width: 15px 0px 0px 0px;
@@ -11218,13 +11219,44 @@ img.obten-img {
         padding: 30px 20px;
         width: 100%;
     }
-
+    .banner-force {
+        background: #D51C24;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .t-force {
+        background: #00000000;
+        color: #fff !important;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin: 0 30px;
+    }
+    .flex-item .disciplinas {
+        border-style: solid;
+        border-width: 0px 1px 1px 1px;
+        border-color: #D51C24;
+        height: 140px;
+    }
+    .flex-item .title-disciplina{
+        font-weight: 700;
+        padding-top: 0px;
+    }
     .flex-item-d {
         width: auto;
     }
     .evento {
         width: 100%;
         display: none;
+    }
+    .num-force {
+        font-size: 4em !important;
+        font-weight: 700 !important;
+    }
+    .force-cc{
+        font-family: 'Montserrat';
+        padding: 0px;
+        font-weight: 600;
+        font-size: 1.2em;
     }
     .evento-responsive {
         width: 100%;
