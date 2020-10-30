@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\DB;
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="../../img/muaythai/Recurso-1.png" alt="muaythai" class="karate-img"/>
+                <img src="../../img/muaythai/ml1.png" alt="muaythai" class="karate-img"/>
             </div>
             <div class="col-md-6">
                 <div class="form-a form-b lform">
@@ -142,7 +142,7 @@ use Illuminate\Support\Facades\DB;
             </div>
             <div class="row packec">
                 <div class="col-md-5">
-                    <img src="../../img/portada/banner/guillermo_foto.jpg" alt="karate" class="karate-img"/>
+                    <img src="../../img/portada/guillermo-de-vettori.jpg" alt="karate" class="karate-img"/>
                 </div>
                 <div class="col-md-7 packec3">
                     <b>GUILLERMO DE VETTORI:</b><br>

@@ -64,7 +64,7 @@
         <img src="../../img/portada/banner/tusobjetivos.png" alt="innovacion" class="tusobjetivos"/>
         <ul class="flex-container">
             <li class="flex-item objetivosimg">
-                <img src="../../img/defensa-personal.jpg" alt="innovacion"/>
+                <img src="../../img/portada/defensa-personal_2.jpg" alt="defensa"/>
                 <div class="disciplinas">
                     <h4 class="title-disciplina">Defensa Personal</h4>
                     <hr class="separator-block">
@@ -72,7 +72,7 @@
                 </div>
             </li>
             <li class="flex-item objetivosimg">
-                <img src="../../img/portada/disciplina/artes-marciales.jpg" alt="emprendimiento"/>
+                <img src="../../img/defensa-personal.jpg" alt="defensa2"/>
                 <div class="disciplinas">
                     <h4 class="title-disciplina">Artes Marciales</h4>
                     <hr class="separator-block">
@@ -80,7 +80,7 @@
                 </div>
             </li>
             <li class="flex-item objetivosimg">
-                <img src="../../img/portada/disciplina/mantente-en-forma.jpg" alt="corporacion"/>
+                <img src="../../img/portada/mantente-en-forma.jpg" alt="mantente-en-forma"/>
                 <div class="disciplinas">
                     <h4 class="title-disciplina">Mantente en forma</h4>
                     <hr class="separator-block">
@@ -96,7 +96,7 @@
             <ul class="flex-container">
                 <a href="{{route('muaythai-basico')}}">
                     <li class="flex-item-d">
-                        <img src="../../img/portada/disciplina/muay-thai.jpg" alt="muay-thai"/>
+                        <img src="../../img/portada/muay-thai_3.jpg" alt="muay-thai"/>
                         <div class="disciplinas">
                             <h4 class="disciplina-mk">MUAY THAI</h4>
                         </div>

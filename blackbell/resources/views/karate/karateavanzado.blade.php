@@ -139,7 +139,7 @@
             </div>
             <div class="row packec">
                 <div class="col-md-5">
-                    <img src="../../img/portada/banner/guillermo_foto.jpg" alt="karate" class="karate-img"/>
+                    <img src="../../img/portada/guillermo-de-vettori.jpg" alt="karate" class="karate-img"/>
                 </div>
                 <div class="col-md-7 packec3">
                     <b>GUILLERMO DE VETTORI:</b><br>
