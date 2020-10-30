@@ -3,7 +3,7 @@
     <div class="banner-reto">
         <div class="row">
             <div class="col-md-6">
-                <img class="principal" src="../../img/reto/fight.png" alt="innovacion"/>
+                <img class="principal" src="../../img/reto/nuevo-titulo.png" alt="innovacion"/>
             </div>
             <div class="col-md-6">
                 <div class="form-c">
@@ -79,7 +79,7 @@
             </div>
             <div class="col-md-6">
                 <div class="espaciado-force">
-                    <h2 class="evento-title evento-force">Únete al <br>BLACK BELT FORCE</h2>
+                    <h2 class="evento-title evento-force">Únete a la comunidad <br>BLACK BELT</h2>
                     <p class="text-evento text-force">¡Una comunidad que pelea día a día para llegar a sus resultados
                         dando el 200% en todo lo que se propone! <b>Disciplina, Motivación
                         y Resultados</b> es lo que nos une en este
@@ -130,7 +130,7 @@
             </li>
             <li class="flex-item t-force">
                 <div class="disciplinas">
-                    <h4 class="title-disciplina title-force num-force">45</h4>
+                    <h4 class="title-disciplina title-force num-force">40</h4>
                     <hr class="separator-force">
                     <p class="force-cc">MINUTOS AL DÍA</p>
                 </div>
@@ -176,10 +176,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="../../img/reto/obtentuentrada.png" alt="" class="obten-img"/>
+                <img src="../../img/reto/entrada.png" alt="" class="obten-img"/>
             </div>
             <div class="col-md-6">
-                <img src="../../img/reto/actualmente.png" alt="" class="obten-img"/>
+                <img src="../../img/reto/membresia.png" alt="" class="obten-img"/>
             </div>
         </div>
     </div>
