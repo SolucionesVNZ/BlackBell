@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fce9fdd-e183-4552-9294-7c2c88724ac2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/img/portada/destokp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/portada/movil.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/reto/entrada.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/reto/membresia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/reto/nuevo-titulo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reto.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="634">
-              <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+            <state relative-caret-position="566">
+              <caret line="115" column="41" selection-start-line="115" selection-start-column="41" selection-end-line="115" selection-end-column="41" />
               <folding>
                 <element signature="e#5536#6548#1#HTML" />
               </folding>
@@ -37,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75514">
-              <caret line="4442" selection-start-line="4442" selection-end-line="4442" />
+            <state relative-caret-position="54">
+              <caret line="11282" column="19" lean-forward="true" selection-start-line="11282" selection-start-column="19" selection-end-line="11282" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -143,8 +137,8 @@
         <option value="$PROJECT_DIR$/resources/views/muaythai/muaythaibasico.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/muaythai/muaythaiintermedio.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/muaythai/muaythaiavanzado.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/app.css" />
         <option value="$PROJECT_DIR$/resources/views/reto.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/app.css" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
       </list>
     </option>
@@ -318,13 +312,6 @@
             <path>
               <item name="blackbell" type="b2602c69:ProjectViewProjectNode" />
               <item name="blackbell" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="reto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blackbell" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blackbell" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -417,12 +404,12 @@
       <workItem from="1603399747235" duration="57376000" />
       <workItem from="1603862220976" duration="748000" />
       <workItem from="1603895684133" duration="12651000" />
-      <workItem from="1603997130151" duration="19371000" />
+      <workItem from="1603997130151" duration="20647000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="316161000" />
+    <option name="totallyTimeSpent" value="317437000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -435,7 +422,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1608" y="-140" width="1616" height="916" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20115681" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -772,20 +758,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
-          <folding>
-            <element signature="e#5536#6548#1#HTML" />
-          </folding>
+        <state relative-caret-position="54">
+          <caret line="11282" column="19" lean-forward="true" selection-start-line="11282" selection-start-column="19" selection-end-line="11282" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.css">
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75514">
-          <caret line="4442" selection-start-line="4442" selection-end-line="4442" />
+        <state relative-caret-position="566">
+          <caret line="115" column="41" selection-start-line="115" selection-start-column="41" selection-end-line="115" selection-end-column="41" />
+          <folding>
+            <element signature="e#5536#6548#1#HTML" />
+          </folding>
         </state>
       </provider>
     </entry>
