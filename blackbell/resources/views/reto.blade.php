@@ -75,7 +75,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img style="margin-top: 60px; width: 100%;" src="../../img/reto/fotografia.png" alt="innovacion"/>
+                <img style="margin-top: 60px; width: 100%;" src="../../img/reto/nueva-img.png" alt="innovacion"/>
             </div>
             <div class="col-md-6">
                 <div class="espaciado-force">
@@ -188,7 +188,7 @@
     <div class="container" style="padding-top: 20px;">
         <hr class="red-force">
         <h2 class="evento-title evento-force time-force">PRECIOS</h2>
-        <img src="../../img/reto/nueva-taba.png" alt="precios" class="time-img"/>
+        <img src="../../img/reto/tabla-actualizada.png" alt="precios" class="time-img"/>
     </div>
     </div>
 @endsection

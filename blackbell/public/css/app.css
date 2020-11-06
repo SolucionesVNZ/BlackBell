@@ -10844,7 +10844,7 @@ a.text-dark:focus {
 }
 /********** BANNER RETO ************/
 .banner-reto{
-    background-image: url('../img/reto/fondo.jpg');
+    background-image: url('../img/reto/banner-reto.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding-top: 100px;
@@ -11263,7 +11263,7 @@ img.obten-img {
         display: block;
     }
     .banner-reto {
-        background-image: url(../img/reto/fondo.jpg);
+        background-image: url(../img/reto/banner-reto.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
