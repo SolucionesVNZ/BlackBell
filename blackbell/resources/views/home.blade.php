@@ -113,8 +113,8 @@
             </ul>
         </div>
     </div>
-    <a href="{{route('reto')}}"><img src="../../img/portada/desktop.jpg" alt="evento" class="evento"/></a>
-    <a href="{{route('reto')}}"><img src="../../img/portada/movil.jpg" alt="evento-movil" class="evento-responsive"/></a>
+    <a href="{{route('reto')}}"><img src="../../img/reto/banner-black-belt.png" alt="evento" class="evento"/></a>
+    <a href="{{route('reto')}}"><img src="../../img/reto/banner-black.png" alt="evento-movil" class="evento-responsive"/></a>
   <!--  <div class="banner-evento">
         <div class="row">
             <div class="offset-md-6  col-md-4">

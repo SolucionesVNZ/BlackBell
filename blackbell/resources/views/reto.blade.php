@@ -3,7 +3,7 @@
     <div class="banner-reto">
         <div class="row">
             <div class="col-md-6">
-                <img class="principal" src="../../img/reto/nuevo-titulo.png" alt="innovacion"/>
+                <img class="principal" src="../../img/reto/titulo-new.png" alt="innovacion"/>
             </div>
             <div class="col-md-6">
                 <div class="form-c">
